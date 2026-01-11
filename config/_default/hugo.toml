@@ -6,6 +6,10 @@ theme = "blowfish" # UNCOMMENT THIS LINE
 baseURL = "https://tecknet-gg.github.io/dev/"
 defaultContentLanguage = "en"
 
+title = "tecknet's blog"
+description = "Just your average blog!"
+
+
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
 enableRobotsTXT = true
