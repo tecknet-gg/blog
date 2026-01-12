@@ -22,16 +22,6 @@
             }
           },
           {
-            "id": "fd3ef9d3a9d83e05",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
             "id": "6f28485cb10cc1f0",
             "type": "leaf",
             "state": {
@@ -46,17 +36,17 @@
             }
           },
           {
-            "id": "30281ff02c2e2ac5",
+            "id": "2b2f4e4b298e4ca9",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "content/blog/aaron's dungeon.md",
-                "bFile": "content/blog/aaron's dungeon.md",
-                "aRef": ""
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: aaron's dungeon  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "conflict-files-obsidian-git"
             }
           },
           {
@@ -74,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -233,7 +223,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -249,8 +240,9 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "fd3ef9d3a9d83e05",
+  "active": "2b2f4e4b298e4ca9",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
     "content/blog/_index.md",
     "content/blog/bob.md",
     "content/blog/blog 3.md",
