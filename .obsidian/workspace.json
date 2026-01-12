@@ -10,7 +10,7 @@
           {
             "id": "2f3d0e42b681ca87",
             "type": "tabs",
-            "dimension": 78.29293993677555,
+            "dimension": 41.93888303477345,
             "children": [
               {
                 "id": "4f89b457ddb7791f",
@@ -76,7 +76,7 @@
           {
             "id": "509c9a529167ed64",
             "type": "tabs",
-            "dimension": 21.707060063224446,
+            "dimension": 58.06111696522655,
             "children": [
               {
                 "id": "018cc7e84851f599",
@@ -299,6 +299,15 @@
   },
   "active": "018cc7e84851f599",
   "lastOpenFiles": [
+    "matrix.js",
+    "layouts/partials/extend-body.html",
+    "layouts/partials/Untitled.txt",
+    "layouts/partials",
+    "layouts/untitled folder",
+    "assets/js/matrix.js",
+    "assets/js",
+    "assets/untitled folder",
+    "assets/matrix.js",
     "content/resume/_index.md",
     "content/projects/_index.md",
     "content/projects",
@@ -321,17 +330,9 @@
     "templates/New Book Review.md",
     "assets/images/default.png",
     "conflict-files-obsidian-git.md",
-    "public/css/main.bundle.min.a4afaac4d164a34d3598c811d1c6df51e909a1dd0e0e36ddfe7f909b48ca3a42211e99203f387ea6855c4cdadf47f6af0cc8dadf8fc1dde8a81df2d12faa24a0.css",
     "public/images/default_hu_45d7457fbf73aa37.png",
     "public/images/default_hu_f736fbb084a7a7ea.png",
     "public/images/default_hu_e71325e071566fe5.png",
-    "resources/_gen/images/images",
-    "resources/_gen/images",
-    "resources/_gen",
-    "resources",
-    "public/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js",
-    "public/tags/art/page/1/index.html",
-    "public/tags/art/page/1",
     "themes/blowfish/exampleSite/content/users/fec44f5dd2be29e37c305696d018f99f/index.zh-cn.md",
     "themes/blowfish/exampleSite/content/users/fec44f5dd2be29e37c305696d018f99f/index.pt-pt.md",
     "themes/blowfish/exampleSite/content/users/fec44f5dd2be29e37c305696d018f99f/index.pt-br.md",
@@ -343,7 +344,6 @@
     "themes/blowfish/exampleSite/content/users/fec44f5dd2be29e37c305696d018f99f/index.de.md",
     "themes/blowfish/exampleSite/content/users/fd12be5b9c01f6b6089b8b1cbff1350d/index.zh-cn.md",
     "themes/blowfish/exampleSite/content/users/fd12be5b9c01f6b6089b8b1cbff1350d/index.de.md",
-    "themes/blowfish/exampleSite/content/users/fd12be5b9c01f6b6089b8b1cbff1350d/index.pt-pt.md",
-    "themes/blowfish/exampleSite/content/users/fd12be5b9c01f6b6089b8b1cbff1350d/index.pt-br.md"
+    "themes/blowfish/exampleSite/content/users/fd12be5b9c01f6b6089b8b1cbff1350d/index.pt-pt.md"
   ]
 }
