@@ -25,14 +25,10 @@
             "id": "fd3ef9d3a9d83e05",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/blog/blog 1.md",
-                "mode": "source",
-                "source": true
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "blog 1"
+              "title": "New tab"
             }
           },
           {
@@ -78,7 +74,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -253,10 +249,10 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "30281ff02c2e2ac5",
+  "active": "fd3ef9d3a9d83e05",
   "lastOpenFiles": [
-    "content/blog/bob.md",
     "content/blog/_index.md",
+    "content/blog/bob.md",
     "content/blog/blog 3.md",
     "templates/New Blog Post.md",
     "_index.md",
