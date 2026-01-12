@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/blog 1.md",
+                "file": "content/blog/aaron's dungeon.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "blog 1"
+              "title": "aaron's dungeon"
             }
           },
           {
@@ -257,7 +257,7 @@
   "lastOpenFiles": [
     "content/blog/_index.md",
     "content/blog/blog 3.md",
-    "content/blog/blog 1.md",
+    "content/blog/aaron's dungeon.md",
     "templates/New Blog Post.md",
     "_index.md",
     "public/css/main.bundle.min.a4afaac4d164a34d3598c811d1c6df51e909a1dd0e0e36ddfe7f909b48ca3a42211e99203f387ea6855c4cdadf47f6af0cc8dadf8fc1dde8a81df2d12faa24a0.css",
