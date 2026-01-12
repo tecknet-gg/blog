@@ -18,7 +18,7 @@ title = "" # This hides the "Blowfish" text in the top left
   image = "images/default.png"
   imageQuality = 96
   headline = "tecknet.gg"
-  bio = "Student at Sutton Grammar. Exploring tech and digital gardening."
+  bio = ""
   links = [
     {discord = "https:discord.com/users/821413155208822816"}, { instagram = "https://instagram.com/tecknet.gg" }, {linkedin = "https://www.linkedin.com/in/jeevan-hatti-82a22a2b0/"}, {github = "https://github.com/tecknet-gg"}
   ]
