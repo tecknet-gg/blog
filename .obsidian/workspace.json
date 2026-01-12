@@ -53,14 +53,14 @@
             "id": "30281ff02c2e2ac5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "content/blog/aaron's dungeon.md",
-                "mode": "source",
-                "source": true
+                "aFile": "content/blog/aaron's dungeon.md",
+                "bFile": "content/blog/aaron's dungeon.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "aaron's dungeon"
+              "icon": "diff",
+              "title": "Diff: aaron's dungeon  (Working Tree)"
             }
           },
           {
@@ -255,9 +255,9 @@
   },
   "active": "30281ff02c2e2ac5",
   "lastOpenFiles": [
+    "content/blog/bob.md",
     "content/blog/_index.md",
     "content/blog/blog 3.md",
-    "content/blog/aaron's dungeon.md",
     "templates/New Blog Post.md",
     "_index.md",
     "public/css/main.bundle.min.a4afaac4d164a34d3598c811d1c6df51e909a1dd0e0e36ddfe7f909b48ca3a42211e99203f387ea6855c4cdadf47f6af0cc8dadf8fc1dde8a81df2d12faa24a0.css",
