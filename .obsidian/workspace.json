@@ -78,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -253,14 +253,15 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "84ffcda65f2309ba",
+  "active": "30281ff02c2e2ac5",
   "lastOpenFiles": [
+    "content/blog/_index.md",
+    "content/blog/blog 3.md",
     "content/blog/blog 1.md",
     "templates/New Blog Post.md",
     "_index.md",
     "public/css/main.bundle.min.a4afaac4d164a34d3598c811d1c6df51e909a1dd0e0e36ddfe7f909b48ca3a42211e99203f387ea6855c4cdadf47f6af0cc8dadf8fc1dde8a81df2d12faa24a0.css",
     "content/blog/blog 2.md",
-    "content/blog/blog 3.md",
     "public/images/default_hu_45d7457fbf73aa37.png",
     "public/images/default_hu_f736fbb084a7a7ea.png",
     "resources/_gen/images/images/default_hu_45d7457fbf73aa37.png",
@@ -274,7 +275,6 @@
     "resources/_gen",
     "resources",
     "public/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js",
-    "content/blog/_index.md",
     "public/tags/art/page/1/index.html",
     "public/tags/art/page/1",
     "public/tags/art/page",

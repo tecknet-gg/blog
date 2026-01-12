@@ -1,5 +1,5 @@
 ---
-title: i really like potatoes
+title: i really really like potatoes
 date: 2026-01-11
 description: Why your morning coffee might be lying to you.
 summary: Blog desc 1
