@@ -1,1 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title/><link>https://tecknet-gg.github.io/dev/</link><description>Recent content on</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hattijeevan@example.com (Jeevan Hatti)</managingEditor><webMaster>hattijeevan@example.com (Jeevan Hatti)</webMaster><copyright>© 2026 tecknet.gg</copyright><lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://tecknet-gg.github.io/dev/index.xml" rel="self" type="application/rss+xml"/><item><title>blog 1</title><link>https://tecknet-gg.github.io/dev/blog/blog-1/</link><pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate><author>hattijeevan@example.com (Jeevan Hatti)</author><guid>https://tecknet-gg.github.io/dev/blog/blog-1/</guid><description>Blog desc 1</description></item><item><title>blog 2</title><link>https://tecknet-gg.github.io/dev/blog/blog-2/</link><pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate><author>hattijeevan@example.com (Jeevan Hatti)</author><guid>https://tecknet-gg.github.io/dev/blog/blog-2/</guid><description>blog desc 2</description></item><item><title>blog 3</title><link>https://tecknet-gg.github.io/dev/blog/blog-3/</link><pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate><author>hattijeevan@example.com (Jeevan Hatti)</author><guid>https://tecknet-gg.github.io/dev/blog/blog-3/</guid><description>blog desc 3</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>http://localhost:1313/dev/</link>
+    <description>Recent content on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>hattijeevan@example.com (Jeevan Hatti)</managingEditor>
+    <webMaster>hattijeevan@example.com (Jeevan Hatti)</webMaster>
+    <copyright>© 2026 tecknet.gg</copyright>
+    <lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/dev/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>aaron.</title>
+      <link>http://localhost:1313/dev/blog/bob/</link>
+      <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
+      <author>hattijeevan@example.com (Jeevan Hatti)</author>
+      <guid>http://localhost:1313/dev/blog/bob/</guid>
+      <description>Blog desc 1</description>
+      
+    </item>
+    
+    <item>
+      <title>blog 2</title>
+      <link>http://localhost:1313/dev/blog/blog-2/</link>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
+      <author>hattijeevan@example.com (Jeevan Hatti)</author>
+      <guid>http://localhost:1313/dev/blog/blog-2/</guid>
+      <description>blog desc 2</description>
+      
+    </item>
+    
+    <item>
+      <title>blog 3</title>
+      <link>http://localhost:1313/dev/blog/blog-3/</link>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+      <author>hattijeevan@example.com (Jeevan Hatti)</author>
+      <guid>http://localhost:1313/dev/blog/blog-3/</guid>
+      <description>blog desc 3</description>
+      
+    </item>
+    
+  </channel>
+</rss>

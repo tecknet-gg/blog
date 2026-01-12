@@ -1,3 +1,3 @@
 User-agent: *
-Allow: /
-Sitemap: https://tecknet-gg.github.io/dev/sitemap.xml
+Disallow: /
+Sitemap: http://localhost:1313/dev/sitemap.xml
