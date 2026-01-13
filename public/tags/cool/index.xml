@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cool on </title>
-    <link>http://localhost:1313/blog/tags/cool/</link>
+    <link>http://localhost:1313/tags/cool/</link>
     <description>Recent content in Cool on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>hattijeevan@example.com (Jeevan Hatti)</managingEditor>
     <webMaster>hattijeevan@example.com (Jeevan Hatti)</webMaster>
     <copyright>© 2026 tecknet.gg</copyright>
-    <lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/blog/tags/cool/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/cool/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>why you need an aaron</title>
-      <link>http://localhost:1313/blog/blog/why-you-need-an-aaron/</link>
+      <link>http://localhost:1313/blog/why-you-need-an-aaron/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
       <author>hattijeevan@example.com (Jeevan Hatti)</author>
-      <guid>http://localhost:1313/blog/blog/why-you-need-an-aaron/</guid>
+      <guid>http://localhost:1313/blog/why-you-need-an-aaron/</guid>
       <description>Details on why you should buy an aaron.</description>
       
     </item>

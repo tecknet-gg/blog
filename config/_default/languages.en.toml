@@ -15,10 +15,10 @@ title = ""
 [params.author]
   name = "Jeevan Hatti"
   email = "hattijeevan@example.com"
-  image = "images/default.png"
+  image = "images/pfp.jpg"
   imageQuality = 96
   headline = "tecknet.gg"
   bio = "-"
   links = [
-    {discord = "https:discord.com/users/821413155208822816"}, { instagram = "https://instagram.com/tecknet.gg" }, {linkedin = "https://www.linkedin.com/in/jeevan-hatti-82a22a2b0/"}, {github = "https://github.com/tecknet-gg"}, {email = "hattijeevan@gmail.com"}
+    {discord = "https:discord.com/users/821413155208822816"}, { instagram = "https://instagram.com/tecknet.gg" }, {linkedin = "https://www.linkedin.com/in/jeevan-hatti-82a22a2b0/"}, {github = "https://github.com/tecknet-gg"}, {email = "mailto:hattijeevan@gmail.com"}
   ]
