@@ -12,11 +12,11 @@
     <lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/dev/blog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>aaron.</title>
-      <link>http://localhost:1313/dev/blog/bob/</link>
+      <title>why you need an aaron</title>
+      <link>http://localhost:1313/dev/blog/why-you-need-an-aaron/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
       <author>hattijeevan@example.com (Jeevan Hatti)</author>
-      <guid>http://localhost:1313/dev/blog/bob/</guid>
+      <guid>http://localhost:1313/dev/blog/why-you-need-an-aaron/</guid>
       <description>Blog desc 1</description>
       
     </item>

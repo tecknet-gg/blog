@@ -20,5 +20,5 @@ title = ""
   headline = "tecknet.gg"
   bio = "-"
   links = [
-    {discord = "https:discord.com/users/821413155208822816"}, { instagram = "https://instagram.com/tecknet.gg" }, {linkedin = "https://www.linkedin.com/in/jeevan-hatti-82a22a2b0/"}, {github = "https://github.com/tecknet-gg"}
+    {discord = "https:discord.com/users/821413155208822816"}, { instagram = "https://instagram.com/tecknet.gg" }, {linkedin = "https://www.linkedin.com/in/jeevan-hatti-82a22a2b0/"}, {github = "https://github.com/tecknet-gg"}, {email = "hattijeevan@gmail.com"}
   ]

@@ -13,7 +13,7 @@ enableA11y = false
 enableSearch = true
 enableCodeCopy = false
 enableStructuredBreadcrumbs = false
-# enableStyledScrollbar = true # disable to use native scrollbar style (defaults to true)
+enableStyledScrollbar = false # disable to use native scrollbar style (defaults to true)
 
 replyByEmail = false
 
@@ -55,7 +55,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   #homepageImage = "IMAGE.jpg" # used in: hero, and card
   showRecent = true
   showRecentItems = 3
-  showMoreLink = true
+  showMoreLink = false
   showMoreLinkDest = "/blog/"
   cardView = true
   cardViewScreenWidth = false
@@ -64,9 +64,9 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [article]
   showDate = true
-  showViews = false
+  showViews = false # maybe turn off?
   showLikes = false
-  showDateOnlyInArticle = false
+  showDateOnlyInArticle = false 
   showDateUpdated = false
   showAuthor = false
   # showAuthorBottom = false
@@ -118,7 +118,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 [taxonomy]
   showTermCount = true
   showHero = false
-  # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+  heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
   showBreadcrumbs = false
   showViews = false
   showLikes = false

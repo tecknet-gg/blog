@@ -1,28 +1,35 @@
 const canvas = document.getElementById('bg-canvas');
 const ctx = canvas.getContext('2d');
+let currentPreference = localStorage.getItem("appearance")
 
 let width, height, cols, rows;
 const RES = 10;
-const SCALE = 0.05;
-const SPEED = 0.008;
-let z_time = 0;
+const SCALE = 0.05; //0.05
+const SPEED = 0.005;
+let zTime = 0;
 
-// Gradient colors
-const TOP_LEFT = { r: 31, g: 80, b: 255 };
-const BOTTOM_RIGHT = { r: 255, g: 0, b: 0 };
 
-// Perlin noise permutation table
+let TOP_LEFT = { r: 31, g: 80, b: 255 };
+let BOTTOM_RIGHT = { r: 255, g: 0, b: 0 };
+
 const p = new Uint8Array(512);
 for (let i = 0; i < 256; i++) p[i] = p[i + 256] = Math.floor(Math.random() * 256);
 
-function fade(t) { return t * t * t * (t * (t * 6 - 15) + 10); }
-function lerp(t, a, b) { return a + t * (b - a); }
+function fade(t) { 
+  return t * t * t * (t * (t * 6 - 15) + 10); 
+}
+
+function lerp(t, a, b) { 
+  return a + t * (b - a); 
+}
+
 function grad(hash, x, y, z) {
   const h = hash & 15;
   const u = h < 8 ? x : y;
   const v = h < 4 ? y : h === 12 || h === 14 ? x : z;
   return ((h & 1) === 0 ? u : -u) + ((h & 2) === 0 ? v : -v);
 }
+
 function noise(x, y, z) {
   const X = Math.floor(x) & 255;
   const Y = Math.floor(y) & 255;
@@ -51,6 +58,7 @@ function resize() {
   cols = Math.ceil(width / RES);
   rows = Math.ceil(height / RES);
 }
+
 window.addEventListener('resize', resize);
 resize();
 
@@ -63,10 +71,20 @@ function lerpColor(c1, c2, t) {
 }
 
 function draw() {
-  ctx.fillStyle = 'rgb(10,10,15)'; // dark background
-  ctx.fillRect(0, 0, width, height);
+  currentPreference = localStorage.getItem("appearance");
+  if(currentPreference=="dark") {
+    ctx.fillStyle = 'rgb(0, 0, 0)'; // dark background
+    TOP_LEFT = { r: 46, g: 31, b: 255 };
+    BOTTOM_RIGHT = { r: 255, g: 136, b: 31 }; 
+  } else {
+    ctx.fillStyle = 'rgb(255,255,255)'; 
+    TOP_LEFT = { r: 125, g: 125, b: 125 };   
+    BOTTOM_RIGHT = { r: 255, g: 255, b: 255 }; 
+  }
 
-  ctx.font = `bold ${RES}px Courier New`;
+    ctx.fillRect(0, 0, width, height);
+
+  ctx.font = `bold ${RES}px Helvetica`;
   ctx.textAlign = 'left';
   ctx.textBaseline = 'top';
 
@@ -74,14 +92,13 @@ function draw() {
     for (let j = 0; j < rows; j++) {
       const x = i * RES;
       const y = j * RES;
-      const n = noise(i * SCALE, j * SCALE, z_time);
+      const n = noise(i * SCALE, j * SCALE, zTime);
 
       const char = n > 0 ? "0" : "1";
 
       const t = (x / width + y / height) / 2;
       const color = lerpColor(TOP_LEFT, BOTTOM_RIGHT, t);
 
-      // Map noise [-1,1] to brightness [0.3,1] to avoid full black
       const brightness = 0.3 + ((n + 1) / 2) * 0.7;
 
       const r = Math.floor(color.r * brightness);
@@ -93,7 +110,7 @@ function draw() {
     }
   }
 
-  z_time += SPEED;
+  zTime += SPEED;
   requestAnimationFrame(draw);
 }
 

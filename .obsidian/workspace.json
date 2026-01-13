@@ -10,7 +10,7 @@
           {
             "id": "2f3d0e42b681ca87",
             "type": "tabs",
-            "dimension": 41.93888303477345,
+            "dimension": 67.33403582718651,
             "children": [
               {
                 "id": "4f89b457ddb7791f",
@@ -62,12 +62,12 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "content/resume/_index.md",
+                    "file": "content/blog/why you need an aaron.md",
                     "mode": "source",
                     "source": false
                   },
                   "icon": "lucide-file",
-                  "title": "_index"
+                  "title": "why you need an aaron"
                 }
               }
             ],
@@ -76,7 +76,7 @@
           {
             "id": "509c9a529167ed64",
             "type": "tabs",
-            "dimension": 58.06111696522655,
+            "dimension": 32.66596417281349,
             "children": [
               {
                 "id": "018cc7e84851f599",
@@ -299,6 +299,11 @@
   },
   "active": "018cc7e84851f599",
   "lastOpenFiles": [
+    "content/blog/why you need an aaron.md",
+    "public/blog/why-you-need-an-aaron/index.html",
+    "public/blog/why-you-need-an-aaron",
+    "content/blog/blog 2.md",
+    "content/blog/blog 3.md",
     "layouts/_default/baseof.html",
     "layouts/_default",
     "layouts/untitled folder",
@@ -307,14 +312,8 @@
     "public/resume/page/1/index.html",
     "public/resume/page/1",
     "public/resume/page",
-    "public/resume/index.xml",
-    "public/resume/index.html",
-    "public/resume",
     "content/resume/_index.md",
     "content/projects/_index.md",
-    "content/blog/bob.md",
-    "content/blog/blog 3.md",
-    "content/blog/blog 2.md",
     "content/blog/_index.md",
     "archetypes/default.md",
     "public/favicon-32x32.png",
