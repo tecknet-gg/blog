@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on </title>
-    <link>http://localhost:1313/tags/</link>
+    <link>//localhost:1313/tags/</link>
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>hattijeevan@example.com (Jeevan Hatti)</managingEditor>
     <webMaster>hattijeevan@example.com (Jeevan Hatti)</webMaster>
     <copyright>© 2026 tecknet.gg</copyright>
-    <lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Aaron</title>
-      <link>http://localhost:1313/tags/aaron/</link>
+      <link>//localhost:1313/tags/aaron/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
       <author>hattijeevan@example.com (Jeevan Hatti)</author>
-      <guid>http://localhost:1313/tags/aaron/</guid>
+      <guid>//localhost:1313/tags/aaron/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Castle</title>
-      <link>http://localhost:1313/tags/castle/</link>
+      <link>//localhost:1313/tags/castle/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
       <author>hattijeevan@example.com (Jeevan Hatti)</author>
-      <guid>http://localhost:1313/tags/castle/</guid>
+      <guid>//localhost:1313/tags/castle/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Cool</title>
-      <link>http://localhost:1313/tags/cool/</link>
+      <link>//localhost:1313/tags/cool/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
       <author>hattijeevan@example.com (Jeevan Hatti)</author>
-      <guid>http://localhost:1313/tags/cool/</guid>
+      <guid>//localhost:1313/tags/cool/</guid>
       <description></description>
       
     </item>

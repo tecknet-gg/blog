@@ -3,7 +3,7 @@
 # https://blowfish.page/docs/getting-started/
 
 theme = "blowfish" # UNCOMMENT THIS LINE
-baseURL = "https://https://tecknet-gg.github.io/blog/"
+baseURL = ""
 defaultContentLanguage = "en"
 
 title = "tecknet's blog"

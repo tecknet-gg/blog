@@ -3,9 +3,9 @@ const ctx = canvas.getContext('2d');
 let currentPreference = localStorage.getItem("appearance")
 
 let width, height, cols, rows;
-const RES = 10;
+const RES = 12;
 const SCALE = 0.05; //0.05
-const SPEED = 0.005;
+const SPEED = 0.003;
 let zTime = 0;
 
 
