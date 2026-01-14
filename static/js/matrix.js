@@ -53,7 +53,6 @@ function resize() {
   cols = Math.ceil(width / RES);
   rows = Math.ceil(height / RES);
   
-  // Set font properties once here instead of inside the loop
   ctx.font = `bold ${RES}px Helvetica`;
   ctx.textAlign = 'left';
   ctx.textBaseline = 'top';
@@ -63,21 +62,17 @@ window.addEventListener('resize', resize);
 resize();
 
 function draw() {
-  // 1. Clear with SOLID black (No alpha here to prevent "smearing")
   ctx.globalAlpha = 1.0;
   ctx.fillStyle = 'rgb(0, 0, 0)'; 
   ctx.fillRect(0, 0, width, height);
 
-  // 2. Define the Color Domain (Sunset Orange & Cyber Blue)
   const orange = { r: 255, g: 136, b: 31 };
   const blue = { r: 46, g: 31, b: 255 };
 
-  // Calculate shifting gradient anchors
   const shift = (Math.sin(colorTime) + 1) / 2;
   const currentTopLeft = lerpColor(blue, orange, shift);
   const currentBottomRight = lerpColor(orange, blue, shift);
 
-  // 3. Render Loop
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
       const x = i * RES;
@@ -86,18 +81,15 @@ function draw() {
       const n = noise(i * SCALE, j * SCALE, zTime);
       const char = n > 0 ? "0" : "1";
       
-      // Calculate color based on position in the gradient
       const t = (x / width + y / height) / 2;
       const baseColor = lerpColor(currentTopLeft, currentBottomRight, t);
 
-      // Brightness logic: 0.3 floor keeps it visible, 0.7 variance for the shimmer
       const brightness = 0.3 + ((n + 1) / 2) * 0.7;
 
       const r = Math.floor(baseColor.r * brightness);
       const g = Math.floor(baseColor.g * brightness);
       const b = Math.floor(baseColor.b * brightness);
 
-      // We use a high alpha for the text to make it "pop"
       ctx.globalAlpha = 0.8;
       ctx.fillStyle = `rgb(${r},${g},${b})`;
       ctx.fillText(char, x, y);
