@@ -77,7 +77,7 @@ function draw() {
   BOTTOM_RIGHT = { r: 255, g: 136, b: 31 };  
   ctx.fillRect(0, 0, width, height);
 
-  ctx.globalAlpha = 1.0;
+  ctx.globalAlpha = 0.75;
 
   ctx.font = `bold ${RES}px Helvetica`;
   ctx.textAlign = 'left';
