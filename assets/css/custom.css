@@ -49,12 +49,17 @@ header.mt-5.max-w-prose {
     width: 100% !important;
 }
 
+.bg-neutral, .dark .bg-neutral-800 {
+    background-color: transparent !important;
+}
+
 /* hide appearance toggle and mobile versions */
 #appearance-switcher, 
 #appearance-switcher-mobile,
 .appearance-switch,
 button[aria-label="Appearance"],
-.flex.p-1.ml-2.rounded-full {
+.flex.p-1.ml-2.rounded-full,
+#footer-appearance-switcher {
     display: none !important;
 }
 
@@ -63,13 +68,13 @@ button[aria-label="Appearance"],
 }
 
 .type-posts main, 
-.kind-page:not(.layout-about) main {
+.kind-page:not(.layout-about):not(.home) main {
     position: relative;
     z-index: 1;
 }
 
 .type-posts main::before,
-.kind-page:not(.layout-about) main::before {
+.kind-page:not(.layout-about):not(.home) main::before {
     content: "";
     position: fixed;
     top: 0;
@@ -86,6 +91,14 @@ button[aria-label="Appearance"],
     pointer-events: none; 
 }
 
+.prose {
+    max-width: 900px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+    text-align: left !important;
+}
+
 aside, 
 .toc-container, 
 #toc,
@@ -98,6 +111,7 @@ aside,
     padding: 0 !important;
 }
 
+/* Updated selector to ensure homepage grid remains intact */
 body.type-posts .lg\:grid, 
 body.kind-page:not(.home) .lg\:grid {
     display: block !important; 
@@ -111,5 +125,6 @@ article, .layout-wrapper, .relative.flex.flex-col {
 
 html {
   font-size: 14pt;
-  background-color: #000000 !important; /* Forces the very base to stay dark */
+  background-color: #000000 !important; 
+  color-scheme: dark; /* Extra hint to the browser to stay dark */
 }
