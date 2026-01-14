@@ -3,7 +3,7 @@
 # https://blowfish.page/docs/getting-started/
 
 theme = "blowfish" # UNCOMMENT THIS LINE
-baseURL = "https://tankberk.shop/"
+baseURL = "https://tecknet.dev/"
 defaultContentLanguage = "en"
 
 title = "tecknet's blog"
