@@ -73,11 +73,11 @@ function lerpColor(c1, c2, t) {
 function draw() {
   currentPreference = localStorage.getItem("appearance");
   ctx.fillStyle = 'rgb(0, 0, 0)'; 
-  TOP_LEFT = { r: 46, g: 31, b: 255 };      // Deep Blue
-  BOTTOM_RIGHT = { r: 255, g: 136, b: 31 };  // Electric Orange
+  TOP_LEFT = { r: 46, g: 31, b: 255 };     
+  BOTTOM_RIGHT = { r: 255, g: 136, b: 31 };  
   ctx.fillRect(0, 0, width, height);
 
-  ctx.globalAlpha = currentPreference === "dark" ? 1.0 : 0.4;
+  ctx.globalAlpha = 1.0;
 
   ctx.font = `bold ${RES}px Helvetica`;
   ctx.textAlign = 'left';

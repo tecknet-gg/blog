@@ -2,72 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title></title>
-    <link>//localhost:1313/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>hattijeevan@example.com (Jeevan Hatti)</managingEditor>
     <webMaster>hattijeevan@example.com (Jeevan Hatti)</webMaster>
     <copyright>© 2026 tecknet.gg</copyright>
-    <lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>why you need an aaron</title>
-      <link>//localhost:1313/blog/why-you-need-an-aaron/</link>
+      <title>Cool little portfolio with Hugo</title>
+      <link>http://localhost:1313/blog/this-website/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
       <author>hattijeevan@example.com (Jeevan Hatti)</author>
-      <guid>//localhost:1313/blog/why-you-need-an-aaron/</guid>
-      <description>Details on why you should buy an aaron.</description>
-      
-    </item>
-    
-    <item>
-      <title>blog 2</title>
-      <link>//localhost:1313/blog/blog-2/</link>
-      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
-      <author>hattijeevan@example.com (Jeevan Hatti)</author>
-      <guid>//localhost:1313/blog/blog-2/</guid>
-      <description>blog desc 2</description>
-      
-    </item>
-    
-    <item>
-      <title>blog 3</title>
-      <link>//localhost:1313/blog/blog-3-1-1/</link>
-      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
-      <author>hattijeevan@example.com (Jeevan Hatti)</author>
-      <guid>//localhost:1313/blog/blog-3-1-1/</guid>
-      <description>blog desc 3</description>
-      
-    </item>
-    
-    <item>
-      <title>blog 3</title>
-      <link>//localhost:1313/blog/blog-3-1-2/</link>
-      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
-      <author>hattijeevan@example.com (Jeevan Hatti)</author>
-      <guid>//localhost:1313/blog/blog-3-1-2/</guid>
-      <description>blog desc 3</description>
-      
-    </item>
-    
-    <item>
-      <title>blog 3</title>
-      <link>//localhost:1313/blog/blog-3-1/</link>
-      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
-      <author>hattijeevan@example.com (Jeevan Hatti)</author>
-      <guid>//localhost:1313/blog/blog-3-1/</guid>
-      <description>blog desc 3</description>
-      
-    </item>
-    
-    <item>
-      <title>blog 3</title>
-      <link>//localhost:1313/blog/blog-3/</link>
-      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
-      <author>hattijeevan@example.com (Jeevan Hatti)</author>
-      <guid>//localhost:1313/blog/blog-3/</guid>
-      <description>blog desc 3</description>
+      <guid>http://localhost:1313/blog/this-website/</guid>
+      <description>The tech stack I used for this static site.</description>
       
     </item>
     

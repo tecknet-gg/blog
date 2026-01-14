@@ -5,7 +5,7 @@ author:
 description:
 summary:
 tags:
-thumbnail:
+featureImage:
 showReadingTime: true
 showTableOfContents: true
 ---

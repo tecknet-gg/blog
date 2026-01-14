@@ -6,7 +6,7 @@ summary: The tech stack I used for this static site.
 tags:
   - website
   - hugo
-thumbnail: images/hugo.png
+featureImage: /images/hugo.png
 showReadingTime: true
 showTableOfContents: false
 ---
