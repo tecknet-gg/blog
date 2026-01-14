@@ -3,11 +3,7 @@
 # https://blowfish.page/docs/getting-started/
 
 theme = "blowfish" # UNCOMMENT THIS LINE
-<<<<<<< HEAD
-baseURL = ""
-=======
 baseURL = "https://tecknet.dev/"
->>>>>>> 41380d83947565e825499fbb36af13b7067aa473
 defaultContentLanguage = "en"
 
 title = "tecknet's blog"
