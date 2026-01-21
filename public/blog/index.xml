@@ -21,15 +21,5 @@
       
     </item>
     
-    <item>
-      <title>Conway&#39;s Game Of Life in Verilog</title>
-      <link>http://localhost:1313/blog/conways-game-of-life/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>hattijeevan@example.com (Jeevan Hatti)</author>
-      <guid>http://localhost:1313/blog/conways-game-of-life/</guid>
-      <description>Implement Conway&amp;rsquo;s Game of Life using Verilog, and mayhaps an FPGA?</description>
-      
-    </item>
-    
   </channel>
 </rss>

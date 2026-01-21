@@ -62,16 +62,6 @@
     </item>
     
     <item>
-      <title>Failed</title>
-      <link>http://localhost:1313/tags/failed/</link>
-      <pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate>
-      <author>hattijeevan@example.com (Jeevan Hatti)</author>
-      <guid>http://localhost:1313/tags/failed/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Levitation</title>
       <link>http://localhost:1313/tags/levitation/</link>
       <pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate>
@@ -82,41 +72,11 @@
     </item>
     
     <item>
-      <title>GoL</title>
-      <link>http://localhost:1313/tags/gol/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>PCB</title>
+      <link>http://localhost:1313/tags/pcb/</link>
+      <pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate>
       <author>hattijeevan@example.com (Jeevan Hatti)</author>
-      <guid>http://localhost:1313/tags/gol/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Programming</title>
-      <link>http://localhost:1313/tags/programming/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>hattijeevan@example.com (Jeevan Hatti)</author>
-      <guid>http://localhost:1313/tags/programming/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>http://localhost:1313/tags/python/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>hattijeevan@example.com (Jeevan Hatti)</author>
-      <guid>http://localhost:1313/tags/python/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Verilog</title>
-      <link>http://localhost:1313/tags/verilog/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>hattijeevan@example.com (Jeevan Hatti)</author>
-      <guid>http://localhost:1313/tags/verilog/</guid>
+      <guid>http://localhost:1313/tags/pcb/</guid>
       <description></description>
       
     </item>

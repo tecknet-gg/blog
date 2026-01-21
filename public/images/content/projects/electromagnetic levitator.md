@@ -26,14 +26,14 @@ Here is the first horrendous iteration:
 
 
 
-![[Website/assets/images/iteration 1 pcb.png]]
+![[iteration1pcb.png]]
 
 God I forgot how horrendous this was. To explain the components, we have a Pi Pico as our microcontroller, doing all the PID stuff. There are two L293D drivers which each drive two of the electromagnets. This IC, lets me control speed and direction, which would be needed to actually manipulate the platform. Down below we have the LM[find ic], an op-amp used to amplify the input sensor values, so my microcontroller could actually register them. The 3 potentiometers were to tune the op-amp, and at the top, theres a linear voltage regulator to step down the 12V input to 3.3 volt so the Pi Pico could use it, and still retain 12V for the electromagnets. Since I knew no better, I decided to use 0603 package resistors (they're *reallllly* small) since I thought I was that competent at soldering (I wasn't). 
 
 The fab I decided to use for this had a lead time of 3 weeks, and it took me a month to get my hands on the board and components. Suffice to pretty much nothing worked. Well the L293D managed to work, since that was straight forward enough. My linear voltage regulator, which I hadn't tested at all before was completely broken. I did manage to solder the resistors, but the solder joints were so bad, that I'm pretty sure I shorted some things. And to tie it all together, I soldered the Pi Pico to the PCB directly instead of through headers, and immediately shorted it. And that was it for the short lived first iteration. Lesson learnt. USE HEADERS (sockets for ICs)!!
 
 Things did get better with the second iteration. Much better.
-![[Website/assets/images/iteration 2 pcb.png]]
+![[iteration2pcb.png]]
 
 Seemingly I failed to learn my lesson with the resistors. But overall, much better designed. I don't remember if I ever fabricated this, but this was one of the many intermediate iterations I have.
 
@@ -41,13 +41,13 @@ I think there was an actual 2nd iteration that I did fabricate, but I might have
 
 Getting back on track, after my supposed 2nd iteration, I finally accepted that I wasn't competent enough to design my own op-amp systems just yet, and so I found some sensor modules on Amazon, with amplifiers built in, and resorted to frankensteining that to my board. 
 
-![[Website/assets/images/iteration 3.png]]
+![[iteration3.png]]
 
-![[Website/assets/images/iteration 3 pcb.png]]
+![[iteration3pcb.png]]
 
 And that leads us to the first design that somewhat works. Yes the traces are horrible. Worse than the second. But it worked. Pretty well believe it or not, all the sub-systems were seemingly sound. Progress was made. After another few hours, I had the top PCB designed too (the one that would house the electromagnet and sensors). 
 
-![[Website/assets/images/top pcb.png]]
+![[toppcb.png]]
 
 With all the hardware seemingly working now, I could move onto coding. 
 

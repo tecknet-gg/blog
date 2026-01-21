@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Welcome to My Profile on </title>
+    <title>Hi! on </title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in Welcome to My Profile on </description>
+    <description>Recent content in Hi! on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>hattijeevan@example.com (Jeevan Hatti)</managingEditor>
@@ -28,16 +28,6 @@
       <author>hattijeevan@example.com (Jeevan Hatti)</author>
       <guid>http://localhost:1313/projects/electromagnetic-levitator/</guid>
       <description>My (horrible) attempt at building an electromagnetic levitator</description>
-      
-    </item>
-    
-    <item>
-      <title>Conway&#39;s Game Of Life in Verilog</title>
-      <link>http://localhost:1313/blog/conways-game-of-life/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>hattijeevan@example.com (Jeevan Hatti)</author>
-      <guid>http://localhost:1313/blog/conways-game-of-life/</guid>
-      <description>Implement Conway&amp;rsquo;s Game of Life using Verilog, and mayhaps an FPGA?</description>
       
     </item>
     

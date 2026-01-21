@@ -225,3 +225,7 @@ article .flex-grow p {
     padding: 0.2rem 0.4rem !important;
     border-radius: 6px !important;
 }
+
+html {
+  zoom: 1.1;
+}

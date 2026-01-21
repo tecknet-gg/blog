@@ -1,8 +1,8 @@
 ---
-title: "Blog"
-description: "Random musings of a random person."
-layout: "list"
-view: "card" 
+title: Blog
+description: Random musings of a random person.
+layout: list
+view: card
 showReference: false
 showReadingTime: true
 showPagination: true

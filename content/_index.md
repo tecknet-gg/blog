@@ -1,6 +1,6 @@
 ---
-title: "Welcome to My Profile"
-layout: "profile"
+title: Hi!
+layout: profile
 showPagination: false
 showRecent: true
 ---
