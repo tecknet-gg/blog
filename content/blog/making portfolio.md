@@ -1,8 +1,8 @@
 ---
-title: Cool little portfolio with Hugo
+title: Making a portfolio with Hugo and Obsidian
 date: 2026-01-11
 description:
-summary: The tech stack I used for this static site.
+summary: Building a site using Hugo and Obsidian
 tags:
   - website
   - hugo
@@ -18,7 +18,7 @@ The only problem was that I'm not really a developer. I've never really messed a
 
 Regardless, I would deem myself at least somewhat competent, and I thought I could make a cool looking website without ever having to really learn web development (now that I say that I realise that wasn't the best attitude to go into this with, but whatever). And in my research for a solution to this very problem I came across [Hugo](https://gohugo.io/), a really cool, more importantly easy to use static site generator. Using Hugo, all I would need to do is install a theme and modify the CSS and other configs a bit to my liking, and voila, cool portfolio (notice how its no longer a "dev" portfolio). A bit of searching later, I saw that [Blowfish](https://blowfish.page/) was all the rage, and so I set up a GitHub repository (so we can host using GitHub Pages), and set about tweaking it to my liking. 
 
-After a good few hours alt-tabbing between the various .toml config files and the docs, and some more painful hours of debugging why GitHub couldn't build, it I had a working site! It was sadly the default Blowfish themed site, and this wouldn't do. Coincidentally, I built this cool looking Perlin Theme in Python the other day:
+After a good few hours alt-tabbing between the various .toml config files and the docs, and some more painful hours of debugging why GitHub couldn't build it, I had a working site! It was sadly the default Blowfish themed site, and this wouldn't do. Coincidentally, I built this cool looking Perlin Theme in Python the other day:
 
 ```
 import pygame  
@@ -78,12 +78,14 @@ if __name__ == "__main__":
 ```
 
 
-I spent far too long converting that over to .js, and frankensteining it into Blowfish, but the results are the cool flowly background theme that we have today. This was the main reason I chose Blowfish as well, since it seemed to handle animated backgrounds pretty well.
+I spent far too long converting that over to .js, and frankensteining it into Blowfish, but the results are the cool flow-y background theme that we have today. This was the main reason I chose Blowfish as well, since it seemed to handle animated backgrounds pretty well.
 
-Anyways for actual content and hosting, I'm using Obsidian to handle content generation. I have a few templates set up with the necessary front-matter to make these posts work. To make pushing to GitHub a bit more seamless, I installed a terminal plugin (you can get a plugin for practically anything at this point...), and now whenever I want to post anything, I just hit do a cheeky git commit -m and a git push, and voila, we're up. For the custom domain, I managed get myself this .dev domain for free using name.com's year long free domain that comes with GitHub education. If you want you can definitely get a .dev domain for like £5 off Namecheap. Otherwise, it will be up and running on https://yourgithubusername.github.io/reponame for free.
+As for the CSS, which handles the theming, I did not have it in me to spend as long as I did on the JS background, half reading Blowfish's docs and half reading JS docs. So I submitted to the demon that is vibe coding and slop generated the CSS. It works. I will hear nothing more of it.
 
-With the why and how of this website now explained, the more trivial "what" remains unanswered. As I explained above, I'm not exactly a dev, just someone who likes coding, and is somewhat competent. Most posts on this website will probably be random projects I'm working on, and some articles on something cool I learnt (like Perlin!). I do have a book review segment for now. I don't know if I'll get around to that, but thats something I'd like to explore. And finally I'll eventually add my Resume here to round off my "personal brand", if you will. Its all pretty obnoxious I know, but an internet rite of passage for sure... 
+Anyways for actual content and hosting, I'm using Obsidian to handle content generation. I have a few templates set up with the necessary front-matter to make these posts work. To make pushing to GitHub a bit more seamless, I installed a terminal plugin (you can get a plugin for practically anything at this point...), and now whenever I want to post anything, I just hit do a cheeky git commit -m and a git push, and voila, we're up. For the custom domain, I managed to get myself this .dev domain for free using name.com's year long free domain that comes with GitHub education.If you're not a student, you can get a cheap .dev domain from Namecheap or similar registrar's for relatively cheap, often around £5 for the first year (usually double or so for each year after that). If you don't want to do that, GitHub pages does host it for free under github.io. 
 
-If anyone does happen to stumble across this from my, what I'm sure is amazing SEO, and was hoping for a more technical write-up, that is sadly not something I will get around to (definitely not due to my lack of domain knowledge). But all the files are up at my [GitHub](https://github.com/tecknet-gg/blog). If you have any questions for whatever reason, feel free to contact me! 
+With the why and how of this website now explained, the more trivial "what" remains unanswered. As I explained above, I'm not exactly a dev, just someone who likes coding, and is somewhat competent. Most posts on this website will probably be random projects I'm working on, and some articles on something cool I learnt (like Perlin Noise!). I do have a book review segment for now. I don't know if I'll get around to that, but thats something I'd like to explore. And finally I'll eventually add my Resume here to round off my "personal brand", if you will. Its all pretty obnoxious I know, but an internet rite of passage for sure... 
+
+If anyone does happen to stumble across this from my, what I'm sure is amazing SEO, and was hoping for a more technical write-up, that is sadly not something I will get around to (definitely not due to my lack of domain knowledge). But all the files are up at my [GitHub](https://github.com/tecknet-gg/blog). If you have any questions for whatever reason, feel free to contact me!
 
 Welp, anyways, thank you for wasting however many minutes Hugo thinks this post is, reading this.
