@@ -1,0 +1,1019 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>A Naïve Attempt at Levitation &middot; </title>
+    <meta name="title" content="A Naïve Attempt at Levitation &middot; ">
+  
+
+  
+  
+    <meta name="description" content="My (horrible) attempt at building an electromagnetic levitator">
+  
+  
+    <meta name="keywords" content="levitation,electronics,failed,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/projects/electromagnetic-levitator/">
+  
+
+  
+  
+    <meta name="author" content="Jeevan Hatti">
+  
+  
+    
+      
+        
+          <link href="https:discord.com/users/821413155208822816" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://instagram.com/tecknet.gg" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.linkedin.com/in/jeevan-hatti-82a22a2b0/" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://github.com/tecknet-gg" rel="me">
+        
+      
+    
+      
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/projects/electromagnetic-levitator/">
+  <meta property="og:title" content="A Naïve Attempt at Levitation">
+  <meta property="og:description" content="My (horrible) attempt at building an electromagnetic levitator">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2024-02-16T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-02-16T00:00:00+00:00">
+    <meta property="article:tag" content="Levitation">
+    <meta property="article:tag" content="Electronics">
+    <meta property="article:tag" content="Failed">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="A Naïve Attempt at Levitation">
+  <meta name="twitter:description" content="My (horrible) attempt at building an electromagnetic levitator">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.7305d1318a7227dc5e986ed3d5c2068e07e4c913207c351a15aa0c1056904e242b3445948ec7a834a4acd183d2b0568a40abc5f31752fb72398a3a7d0ae0602d.css"
+    integrity="sha512-cwXRMYpyJ9xemG7T1cIGjgfkyRMgfDUaFaoMEFaQTiQrNEWUjseoNKSs0YPSsFaKQKvF8xdS&#43;3I5ijp9CuBgLQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.67624a357c928d29b9fe19ba01a1e32c05ad1329ca2a712bf10446df0c6872903d0c14b21f76896b57a5a0710940805416cee38851d9067db6555881188e35a5.js"
+      integrity="sha512-Z2JKNXySjSm5/hm6AaHjLAWtEynKKnEr8QRG3wxocpA9DBSyH3aJa1eloHEJQIBUFs7jiFHZBn22VViBGI41pQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Projects",
+    "name": "A Naïve Attempt at Levitation",
+    "headline": "A Naïve Attempt at Levitation",
+    
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/projects/electromagnetic-levitator/",
+    "author" : {
+      "@type": "Person",
+      "name": "Jeevan Hatti"
+    },
+    "copyrightYear": "2024",
+    "dateCreated": "2024-02-16T00:00:00\u002b00:00",
+    "datePublished": "2024-02-16T00:00:00\u002b00:00",
+    
+    "dateModified": "2024-02-16T00:00:00\u002b00:00",
+    
+    "keywords": ["levitation","electronics","failed"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1563"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral ">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About Me"
+      title="Welcome to My Profile">
+      
+      
+        <span class="text-base font-medium break-normal">
+          About Me
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/blog/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Blog">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/book/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Books"
+      title="Bookshelf">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Books
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/projects/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Projects"
+      title="Projects">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Projects
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      ">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="About Me"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Welcome to My Profile" class="text-2xl font-bold tracking-tight">
+          About Me
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/blog/"
+        aria-label="Blog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Blog" class="text-2xl font-bold tracking-tight">
+          Blog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/book/"
+        aria-label="Books"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Bookshelf" class="text-2xl font-bold tracking-tight">
+          Books
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/projects/"
+        aria-label="Projects"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Projects" class="text-2xl font-bold tracking-tight">
+          Projects
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+  
+  
+    
+  
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+
+  <div class="overflow-hidden rounded-md h-36 md:h-56 lg:h-72 nozoom">
+    <img
+      src="/images/default_hu_e71325e071566fe5.png"
+      role="presentation"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="w-full h-full nozoom object-cover"
+      >
+  </div>
+
+
+
+<div class="single_hero_background nozoom fixed inset-x-0 top-0 h-[800px]">
+  
+  <div
+    class="from-neutral absolute inset-0 bg-gradient-to-t to-transparent mix-blend-normal dark:from-neutral-800"></div>
+  <div
+    class="from-neutral to-neutral absolute inset-0 bg-gradient-to-t opacity-30 mix-blend-normal dark:from-neutral-800 dark:to-neutral-800 dark:opacity-60"></div>
+</div>
+
+
+  <div
+    id="background-blur"
+    class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-xl bg-neutral-100/75 dark:bg-neutral-800/60"></div>
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+    integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+    data-blur-id="background-blur"
+    data-image-id="background-image-main"
+    ></script>
+
+
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        A Naïve Attempt at Levitation
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2024-02-16T00:00:00&#43;00:00">February 16, 2024</time><span class="px-2 text-primary-500">&middot;</span><span>1563 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span>
+    
+
+    
+    
+      <span class="ps-2"><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Draft
+  </span>
+</span>
+</span>
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/levitation/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Levitation
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/electronics/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Electronics
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/failed/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Failed
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <p>To be transparent, this is a write up that is being written (20/01/2024) two years from actually commencing this project. By no means is my account 100% factually accurate (my memory timeouts after a week..). But I thought I&rsquo;d put my, what were definitely, valiant efforts onto paper, and perhaps guilt future me into revisiting the cool idea, that the stupid, stupid 13 year old me left me afraid of. To clarify, this is by no means a guide, or even a real starting point on attempting this project yourself, just my personal flailings.</p>
+<p>So to set the scene, I was 13. I was stupid (as mentioned before). I saw a cool magnetic levitator somewhere on the internet. I was like &ldquo;I could make that&rdquo;. To spoil it, turns out I couldn&rsquo;t. In retrospect, this was rather obvious. Had I ever designed a PCB before? No. Had I ever come across PID control? No. Did I know a singular thing about op-amps? No (heck I didn&rsquo;t even know Kirchoff&rsquo;s Laws, let alone be able to set Op-Amp gains). Point being I was incompetent, and delusional. In my experience, you can get away with either one of them, but both of them, at the same time? Not possible. Of course, I took that a challenge (<em>sigh</em>).</p>
+<p>So what exactly was I trying to build. I think the name, Magnetic Levitator does an apt job of describing it, but if not, circular magnet go floaty floaty (with no string that is :]). The principle behind it was deceptively simple. You have four electromagnets in a grid. In the middle you house two or three hall-effect sensors (for x,y and the less necessary z axis of the platform) [annotate], and some permanent magnets in the outer ring for stability [annotate with link explaining that one theory]. The outer magnets would pull the platform down, and the electromagnets would be repelling it. The sensors in the middle would read the fluctuating magnetic field, and with some clever code you would instruct the magnet to either push harder, or push softer, depending on it&rsquo;s attitude. I thought I could get away with simple proportional error scaling, but oh how I was wrong. PID beckoned.</p>
+<p>For some more context. I grew up messing around with electronics a fair amount. Sure I wasn&rsquo;t some child genius building radios and stuff at the age of 9, but I racked up a fair amount of experience tinkering with electronics modules, microcontrollers, and some code to wrap it all up. Never had I messed around with actually <em>designing</em> stuff. That&rsquo;s scary.</p>
+<p>So with learning PCB design, it did take me a solid 4 months before I had a decent iteration to work from (between moving houses and stuff, but a solid 3 weeks of learning stuff perhaps?).
+A lot of it was spent bogged down in the software. I messed around with different tools, auto-routing, different workflows, before I even understood what I was doing. Just learn the tool people. Worry about whether or not its good later. And if it so happens that another tool is better, defend the tool you were using till the grave. Its that simple.</p>
+<p>Here is the first horrendous iteration:</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="iteration 1"
+    width="1420"
+    height="1398"
+    src="/images/iteration1_hu_65f47c6cd1a7f9.png"
+    srcset="/images/iteration1_hu_65f47c6cd1a7f9.png 800w, /images/iteration1_hu_5c3b08b4c41a6a86.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/images/iteration1.png"></figure>
+<p>![[Website/assets/images/iteration 1 pcb.png]]</p>
+<p>God I forgot how horrendous this was. To explain the components, we have a Pi Pico as our microcontroller, doing all the PID stuff. There are two L293D drivers which each drive two of the electromagnets. This IC, lets me control speed and direction, which would be needed to actually manipulate the platform. Down below we have the LM[find ic], an op-amp used to amplify the input sensor values, so my microcontroller could actually register them. The 3 potentiometers were to tune the op-amp, and at the top, theres a linear voltage regulator to step down the 12V input to 3.3 volt so the Pi Pico could use it, and still retain 12V for the electromagnets. Since I knew no better, I decided to use 0603 package resistors (they&rsquo;re <em>reallllly</em> small) since I thought I was that competent at soldering (I wasn&rsquo;t).</p>
+<p>The fab I decided to use for this had a lead time of 3 weeks, and it took me a month to get my hands on the board and components. Suffice to pretty much nothing worked. Well the L293D managed to work, since that was straight forward enough. My linear voltage regulator, which I hadn&rsquo;t tested at all before was completely broken. I did manage to solder the resistors, but the solder joints were so bad, that I&rsquo;m pretty sure I shorted some things. And to tie it all together, I soldered the Pi Pico to the PCB directly instead of through headers, and immediately shorted it. And that was it for the short lived first iteration. Lesson learnt. USE HEADERS (sockets for ICs)!!</p>
+<p>Things did get better with the second iteration. Much better.
+![[Website/assets/images/iteration 2 pcb.png]]</p>
+<p>Seemingly I failed to learn my lesson with the resistors. But overall, much better designed. I don&rsquo;t remember if I ever fabricated this, but this was one of the many intermediate iterations I have.</p>
+<p>I think there was an actual 2nd iteration that I did fabricate, but I might have switched back o KiCAD from EasyEDA for that one. I had this whole phase where I switched between EasyEDA, and Altium Designer and KiCAD. From my experience Altium is overkill. KiCAD is really good, but the parts integration is annoying. EasyEDA is sketchy since its cloud-based, but EasyEDA, hand-down had the most convenient parts library. For anyone starting out, if you&rsquo;re willing to cede the benefit of cloud based software, definitely learn KiCAD, its more powerful, and FOSS, which is always a big plus.</p>
+<p>Getting back on track, after my supposed 2nd iteration, I finally accepted that I wasn&rsquo;t competent enough to design my own op-amp systems just yet, and so I found some sensor modules on Amazon, with amplifiers built in, and resorted to frankensteining that to my board.</p>
+<p>![[Website/assets/images/iteration 3.png]]</p>
+<p>![[Website/assets/images/iteration 3 pcb.png]]</p>
+<p>And that leads us to the first design that somewhat works. Yes the traces are horrible. Worse than the second. But it worked. Pretty well believe it or not, all the sub-systems were seemingly sound. Progress was made. After another few hours, I had the top PCB designed too (the one that would house the electromagnet and sensors).</p>
+<p>![[Website/assets/images/top pcb.png]]</p>
+<p>With all the hardware seemingly working now, I could move onto coding.</p>
+<p>Ok I was lying to you. The hardware wasn&rsquo;t &ldquo;all&rdquo; working. The op-amps were giving me a lot of trouble, and we&rsquo;re rather patchy, not to mention that tuning was hell. When I started coding, I spent more time debugging the hardware, and it was pretty obvious that this wasn&rsquo;t going anywhere. I was, and still am confident, that with one more holistic re-design I could get a fully functional hardware platform. But at the time, I had already been working on this project on and off for a year, and I had to catchup with the year of GCSE content that I wasn&rsquo;t there for.</p>
+<p>And so this project went to die. Sure now that I look at it, I was probably only 25% of the way there, taking into consideration the timeline of other projects since. The software would have taken a long time, especially with the inherent instability of what I&rsquo;m trying to achieve. But I think I learnt a fair few things regarding taking on projects of similar sizes.</p>
+<p>To summarise. Kill your ego before you start, and don&rsquo;t be utterly delusional. I think if you follow those two pieces of advice, you have a solid chance of succeeding, or at least not failing miserably, which in my eyes, is success.</p>
+<p>On a more serious note, I did learn a lot from this. I&rsquo;ve worked on multiple projects since, and they didn&rsquo;t all end this horribly, which is a massive plus. 7/10 learning experience. Would do again.</p>
+<p>If I do end up re-attempting this project, which I hope I do its really cool when it works.. I think a more integrated system would work far better. With my approach, all my subsystems were designed blindly, and I suppose they were just a bit off, and didn&rsquo;t work together properly. At the time, switching to modules seemed like the right play, but I suppose it just doesn&rsquo;t mesh well. Better designed systems, and actually <em>testing</em> them before fabricating, and I think I would have a much more pleasant time with this. Also python. I don&rsquo;t want to code that in C++ even though it would be so much better. I think I would just bite the performance bullet and get myself a Pi Zero or something so I can just upload python scripts to it.</p>
+<p>To put it simply, don&rsquo;t hate yourself.</p>
+<p>As I proof-read this, I realise I may have leant a bit into narration, more than I hoped so. I definitely skivvied off on the technical aspects, mainly since it would take me an eternity to find all of my design documents and notes. I can&rsquo;t even manage to locate the 4 lines of firmware I wrote. For future write ups, I will go more into depth with the technical aspects, since I should have most of it documented now. For some significantly better resources on this projects, I&rsquo;ve attached some links below.</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_projects/electromagnetic levitator.md"
+          data-oid-likes="likes_projects/electromagnetic levitator.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          © 2026 tecknet.gg
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+
+    </div>
+  <canvas id="bg-canvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></canvas>
+
+<script src="/js/matrix.js" defer></script>
+  </body>
+  
+</html>

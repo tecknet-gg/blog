@@ -254,7 +254,7 @@
     "keywords": ["website","hugo","obsidian","perlin"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1006"
+    "wordCount": "1008"
   }]
   </script>
 
@@ -710,7 +710,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-01-11T00:00:00&#43;00:00">January 11, 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1006 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
+      <time datetime="2026-01-11T00:00:00&#43;00:00">January 11, 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1008 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
     
 
     
@@ -822,7 +822,7 @@
           <p>For whatever reason, the last weekend I dreamed of having my own developer portfolio. Pretty weird way to start a project post but here we are. Like any sane person would do in my circumstances, I googled &ldquo;cool developer portfolios&rdquo;, and landed on <a href="https://github.com/emmabostian/developer-portfolios"  target="_blank">this</a> (i.e the first search results :]). As luck would have it, the first page I found myself ogling at was this beautiful <a href="https://www.daanhessen.nl/"  target="_blank">page</a> by Daan Hessen. Coincidentally, that same week I had been reading around about Perlin Noise (a topic for a future blog post perhaps&hellip;), and struck by a wave of inspiration, I wanted to make my background a Perlin Noise-esque vector map type deal.</p>
 <p>The only problem was that I&rsquo;m not really a developer. I&rsquo;ve never really messed around with web development at all really, and it wasn&rsquo;t particularly something I was interested in. I keep myself in the domain of Python and maybe some occasional C++ whenever I&rsquo;m working on some hardware projects, but JS, CSS and HTML and what not, and probably won&rsquo;t be something I intend on learning properly any time soon.</p>
 <p>Regardless, I would deem myself at least somewhat competent, and I thought I could make a cool looking website without ever having to really learn web development (now that I say that I realise that wasn&rsquo;t the best attitude to go into this with, but whatever). And in my research for a solution to this very problem I came across <a href="https://gohugo.io/"  target="_blank">Hugo</a>, a really cool, more importantly easy to use static site generator. Using Hugo, all I would need to do is install a theme and modify the CSS and other configs a bit to my liking, and voila, cool portfolio (notice how its no longer a &ldquo;dev&rdquo; portfolio). A bit of searching later, I saw that <a href="https://blowfish.page/"  target="_blank">Blowfish</a> was all the rage, and so I set up a GitHub repository (so we can host using GitHub Pages), and set about tweaking it to my liking.</p>
-<p>After a good few hours alt-tabbing between the various .toml config files and the docs, and some more painful hours of debugging why GitHub couldn&rsquo;t build, it I had a working site! It was sadly the default Blowfish themed site, and this wouldn&rsquo;t do. Coincidentally, I built this cool looking Perlin Theme in Python the other day:</p>
+<p>After a good few hours alt-tabbing between the various .toml config files and the docs, and some more painful hours of debugging why GitHub couldn&rsquo;t build it, I had a working site! It was sadly the default Blowfish themed site, and this wouldn&rsquo;t do. Coincidentally, I built this cool looking Perlin Theme in Python the other day:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">import pygame  
 </span></span><span class="line"><span class="cl">import math  
 </span></span><span class="line"><span class="cl">from noise import pnoise3  
@@ -879,8 +879,8 @@
 </span></span><span class="line"><span class="cl">    draw()</span></span></code></pre></div></div>
 <p>I spent far too long converting that over to .js, and frankensteining it into Blowfish, but the results are the cool flow-y background theme that we have today. This was the main reason I chose Blowfish as well, since it seemed to handle animated backgrounds pretty well.</p>
 <p>As for the CSS, which handles the theming, I did not have it in me to spend as long as I did on the JS background, half reading Blowfish&rsquo;s docs and half reading JS docs. So I submitted to the demon that is vibe coding and slop generated the CSS. It works. I will hear nothing more of it.</p>
-<p>Anyways for actual content and hosting, I&rsquo;m using Obsidian to handle content generation. I have a few templates set up with the necessary front-matter to make these posts work. To make pushing to GitHub a bit more seamless, I installed a terminal plugin (you can get a plugin for practically anything at this point&hellip;), and now whenever I want to post anything, I just hit do a cheeky git commit -m and a git push, and voila, we&rsquo;re up. For the custom domain, I managed get myself this .dev domain for free using name.com&rsquo;s year long free domain that comes with GitHub education.If you&rsquo;re not a student, you can get a cheap .dev domain from Namecheap or similar registrar&rsquo;s for relatively cheap, often around £5 for the first year (usually double or so for each year after that). If you don&rsquo;t want to do that, GitHub pages does host it for free under github.io.</p>
-<p>With the why and how of this website now explained, the more trivial &ldquo;what&rdquo; remains unanswered. As I explained above, I&rsquo;m not exactly a dev, just someone who likes coding, and is somewhat competent. Most posts on this website will probably be random projects I&rsquo;m working on, and some articles on something cool I learnt (like Perlin!). I do have a book review segment for now. I don&rsquo;t know if I&rsquo;ll get around to that, but thats something I&rsquo;d like to explore. And finally I&rsquo;ll eventually add my Resume here to round off my &ldquo;personal brand&rdquo;, if you will. Its all pretty obnoxious I know, but an internet rite of passage for sure&hellip;</p>
+<p>Anyways for actual content and hosting, I&rsquo;m using Obsidian to handle content generation. I have a few templates set up with the necessary front-matter to make these posts work. To make pushing to GitHub a bit more seamless, I installed a terminal plugin (you can get a plugin for practically anything at this point&hellip;), and now whenever I want to post anything, I just hit do a cheeky git commit -m and a git push, and voila, we&rsquo;re up. For the custom domain, I managed to get myself this .dev domain for free using name.com&rsquo;s year long free domain that comes with GitHub education.If you&rsquo;re not a student, you can get a cheap .dev domain from Namecheap or similar registrar&rsquo;s for relatively cheap, often around £5 for the first year (usually double or so for each year after that). If you don&rsquo;t want to do that, GitHub pages does host it for free under github.io.</p>
+<p>With the why and how of this website now explained, the more trivial &ldquo;what&rdquo; remains unanswered. As I explained above, I&rsquo;m not exactly a dev, just someone who likes coding, and is somewhat competent. Most posts on this website will probably be random projects I&rsquo;m working on, and some articles on something cool I learnt (like Perlin Noise!). I do have a book review segment for now. I don&rsquo;t know if I&rsquo;ll get around to that, but thats something I&rsquo;d like to explore. And finally I&rsquo;ll eventually add my Resume here to round off my &ldquo;personal brand&rdquo;, if you will. Its all pretty obnoxious I know, but an internet rite of passage for sure&hellip;</p>
 <p>If anyone does happen to stumble across this from my, what I&rsquo;m sure is amazing SEO, and was hoping for a more technical write-up, that is sadly not something I will get around to (definitely not due to my lack of domain knowledge). But all the files are up at my <a href="https://github.com/tecknet-gg/blog"  target="_blank">GitHub</a>. If you have any questions for whatever reason, feel free to contact me!</p>
 <p>Welp, anyways, thank you for wasting however many minutes Hugo thinks this post is, reading this.</p>
 
@@ -918,6 +918,34 @@
     
     <footer class="pt-8 max-w-prose print:hidden">
       
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/blog/conways-game-of-life/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Conway's Game Of Life in Verilog
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">January 1, 0001</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
   
 
 
