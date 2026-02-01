@@ -1,4 +1,1 @@
-Was feeling like making a portfolio site, and here it is. Uses Hugo and Blowfish for the site generation. I have it linked up with Obsidian to make content creation a breeze. 
-Cool little custom .js to make it somewhat interesting, and some css later, here we are!
-
-Site is up at: https://tecknet.dev
+Personal blog made with minimal programming. Uses HUGO and Blowfish. Some custom CSS and a .js script to make a cool perlin noise background. I'm using Obsidian to handle content generation, just have to create a new .md file with the correct frontmatter, and I have the HUGO folder in a vault, so I just have to push to git to update the site. Pretty neat.
