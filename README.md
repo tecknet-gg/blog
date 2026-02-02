@@ -1,0 +1,1 @@
+Personal blog made with minimal programming. Uses HUGO and Blowfish. Some custom CSS and a .js script to make a cool perlin noise background. I'm using Obsidian to handle content generation, just have to create a new .md file with the correct frontmatter, and I have the HUGO folder in a vault, so I just have to push to git to update the site. Pretty neat.
