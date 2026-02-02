@@ -18,7 +18,7 @@ So to set the scene, I was 13. I was stupid (as aforementioned). I saw a cool ma
 
 So what exactly was I trying to build. I think the name, Magnetic Levitator does an apt job of describing it, but if not, circular magnet go floaty floaty (with no string that is). The principle behind it was deceptively simple. You have four electromagnets in a grid. In the middle you house two or three [hall-effect sensors](https://en.wikipedia.org/wiki/Hall_effect_sensor) (for x, y and the less necessary z axis of the platform) and some permanent magnets in the outer ring for stability. The outer magnets would pull the platform down, and the electromagnets would be repelling it. The sensors in the middle would read the fluctuating magnetic field, and with some clever code you would instruct the magnet to either push harder, or push softer, depending on it's attitude. I thought I could get away with simple proportional error scaling, but oh how I was wrong. PID beckoned.
 
-![Credit K&J Magnets](images/polarity.png)
+![Credit K&J Magnetics](images/polarity.png)
 
 If you ever wondered why you couldn't achieve this without implementing a negative feedback loop as described, its because of [Earnshaw's Theorem](https://en.wikipedia.org/wiki/Earnshaw%27s_theorem#:~:text=Earnshaw's%20theorem%20states%20that%20a,mathematician%20Samuel%20Earnshaw%20in%201842.). Put simply, you can't maintain a stable (returns to its home position) equilibrium using only the electrostatic interaction of the charges. Put simpler, it can't be stable using only the charges of the permanent magnets. The math here does get a bit tricky, beyond my comprehension now, as it was then too. But taking it at face value, it prevents you from levitating easily.
 

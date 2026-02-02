@@ -230,6 +230,10 @@
 
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   
 
   
@@ -619,7 +623,7 @@
 
   <div class="overflow-hidden rounded-md h-36 md:h-56 lg:h-72 nozoom">
     <img
-      src="/images/iteration2pcb_hu_1a3e674ab1dde23.png"
+      src="/images/iteration2pcb_hu_f042028cd154c37f.png"
       role="presentation"
       loading="eager"
       decoding="async"
@@ -819,7 +823,7 @@
     loading="lazy"
     decoding="async"
     fetchpriority="auto"
-    alt="Credit K&amp;J Magnets"
+    alt="Credit K&amp;J Magnetics"
     width="600"
     height="800"
     src="/images/polarity.png"
@@ -840,8 +844,8 @@
     alt="iteration 1"
     width="1420"
     height="1398"
-    src="/images/iteration1_hu_65f47c6cd1a7f9.png"
-    srcset="/images/iteration1_hu_65f47c6cd1a7f9.png 800w, /images/iteration1_hu_5c3b08b4c41a6a86.png 1280w"
+    src="/images/iteration1_hu_94623a97fcb3b555.png"
+    srcset="/images/iteration1_hu_94623a97fcb3b555.png 800w, /images/iteration1_hu_72f468dbda58df72.png 1280w"
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/images/iteration1.png"></figure>
 <figure><img
@@ -852,8 +856,8 @@
     alt="Iteration 1 PCB"
     width="1572"
     height="1400"
-    src="/images/iteration1pcb_hu_774d85ec321f3c79.png"
-    srcset="/images/iteration1pcb_hu_774d85ec321f3c79.png 800w, /images/iteration1pcb_hu_b45114bc3a07c645.png 1280w"
+    src="/images/iteration1pcb_hu_cb0c75f62f45f04e.png"
+    srcset="/images/iteration1pcb_hu_cb0c75f62f45f04e.png 800w, /images/iteration1pcb_hu_2a6c4f803d5d1d21.png 1280w"
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/images/iteration1pcb.png"></figure>
 <p>God I forgot how horrendous this was. To explain the components, we have a Pi Pico as our microcontroller, doing all the PID stuff. There are two L293D drivers which each drive two of the electromagnets. This IC, lets me control speed and direction, which would be needed to actually manipulate the platform. Down below we have the LM324, an op-amp used to amplify the input sensor values, so my microcontroller could actually register them. The 3 potentiometers were to tune the op-amp, and at the top, theres a linear voltage regulator to step down the 12V input to 3.3 volt so the Pi Pico could use it, and still retain 12V for the electromagnets. Since I knew no better, I decided to use 0603 package resistors (they&rsquo;re <em>reallllly</em> small) since I thought I was that competent at soldering (I wasn&rsquo;t).</p>
@@ -867,8 +871,8 @@
     alt="Iteration 2"
     width="1622"
     height="1434"
-    src="/images/iteration2pcb_hu_7fdc875fcfec2958.png"
-    srcset="/images/iteration2pcb_hu_7fdc875fcfec2958.png 800w, /images/iteration2pcb_hu_226a6aec852bdbb4.png 1280w"
+    src="/images/iteration2pcb_hu_2bf6116352f2a88a.png"
+    srcset="/images/iteration2pcb_hu_2bf6116352f2a88a.png 800w, /images/iteration2pcb_hu_3f2ef7bc2dd2a438.png 1280w"
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/images/iteration2pcb.png"></figure>
 </p>
@@ -883,8 +887,8 @@
     alt="Iteration 3"
     width="1740"
     height="1584"
-    src="/images/iteration3_hu_f4883d7bc6778d24.png"
-    srcset="/images/iteration3_hu_f4883d7bc6778d24.png 800w, /images/iteration3_hu_d2845e813698d6c6.png 1280w"
+    src="/images/iteration3_hu_6bc2bcf495db1d2e.png"
+    srcset="/images/iteration3_hu_6bc2bcf495db1d2e.png 800w, /images/iteration3_hu_26e4b205121f7003.png 1280w"
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/images/iteration3.png"></figure>
 <figure><img
@@ -895,8 +899,8 @@
     alt="Iteration 3"
     width="1594"
     height="1400"
-    src="/images/iteration3pcb_hu_d4129769c1a24ce2.png"
-    srcset="/images/iteration3pcb_hu_d4129769c1a24ce2.png 800w, /images/iteration3pcb_hu_769d2f59cd4cdc16.png 1280w"
+    src="/images/iteration3pcb_hu_3790e92842c152f6.png"
+    srcset="/images/iteration3pcb_hu_3790e92842c152f6.png 800w, /images/iteration3pcb_hu_7269070c9b6575d3.png 1280w"
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/images/iteration3pcb.png"></figure>
 <p>And that leads us to the first design that somewhat works. Yes the traces are horrible. Worse than the second. But it worked. Pretty well believe it or not, all the sub-systems were seemingly sound. Progress was made. After another few hours, I had the top PCB designed too (the one that would house the electromagnet and sensors).</p>
@@ -908,8 +912,8 @@
     alt="Top PCB"
     width="1732"
     height="1346"
-    src="/images/toppcb_hu_424e32f8f0f4935b.png"
-    srcset="/images/toppcb_hu_424e32f8f0f4935b.png 800w, /images/toppcb_hu_4e81445ddc63bb3e.png 1280w"
+    src="/images/toppcb_hu_629d1310f40c4fa1.png"
+    srcset="/images/toppcb_hu_629d1310f40c4fa1.png 800w, /images/toppcb_hu_bba02c1eaa7f3bf9.png 1280w"
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/images/toppcb.png"></figure>
 <p>With all the hardware seemingly working now, I could move onto coding.</p>
@@ -957,6 +961,34 @@
     
     <footer class="pt-8 max-w-prose print:hidden">
       
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/projects/pan-tilt-mount/">
+              <span class="leading-6">
+                Highly Jank Pan-Tilt Mount&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-01-31T00:00:00&#43;00:00">January 31, 2026</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
   
 
 

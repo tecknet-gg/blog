@@ -9,7 +9,27 @@
     <managingEditor>hattijeevan@example.com (Jeevan Hatti)</managingEditor>
     <webMaster>hattijeevan@example.com (Jeevan Hatti)</webMaster>
     <copyright>© 2026 tecknet.gg</copyright>
-    <lastBuildDate>Fri, 16 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/levitation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/levitation/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Balancing the Balls</title>
+      <link>http://localhost:1313/projects/ball-balancer/</link>
+      <pubDate>Sat, 31 Jan 2026 00:00:00 +0000</pubDate>
+      <author>hattijeevan@example.com (Jeevan Hatti)</author>
+      <guid>http://localhost:1313/projects/ball-balancer/</guid>
+      <description>How I got a robot to do something a 3 year old could.</description>
+      
+    </item>
+    
+    <item>
+      <title>Highly Jank Pan-Tilt Mount</title>
+      <link>http://localhost:1313/projects/pan-tilt-mount/</link>
+      <pubDate>Sat, 31 Jan 2026 00:00:00 +0000</pubDate>
+      <author>hattijeevan@example.com (Jeevan Hatti)</author>
+      <guid>http://localhost:1313/projects/pan-tilt-mount/</guid>
+      <description>The most efficient and effective way to make a pan-tilt™.</description>
+      
+    </item>
     
     <item>
       <title>A Naïve Attempt at Levitation</title>

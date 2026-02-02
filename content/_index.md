@@ -5,7 +5,7 @@ showPagination: false
 showRecent: true
 ---
 
-Hi! I'm Jeevan, a 16 year old student slogging through their A-Levels. This site was mainly created out of wanting to have a site. Now that I have it, I don't particularly know what to do with it. So its a blog? I suppose I'll try and keep things updated (not that anyone is reading this, but I operate on levels of delusion).  If you do happen to find this (or have had this shoved down your throat by me), you can find some write ups on some stuff that I probably read in an article and thought was cool. That is assuming that you're reading this a solid few months after I'm writing, the whole website is a tad bit barren right now...
+Hello! Welcome to my very professional blog/portfolio/internet residence thing. You can find some cool stuff around here hopefully, maybe a blog or two about some computer science-y stuff, or a stupid project that I took on, maybe an occasional book review, or some other thing I liked. Have fun :]
 
 <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
 <script>

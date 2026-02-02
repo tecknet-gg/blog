@@ -20,7 +20,7 @@ replyByEmail = false
 
 
 
-mainSections = ["blog", "book","resume","projects"]
+mainSections = ["blog","projects"]
 # robots = ""
 
 disableImageOptimization = false
@@ -58,7 +58,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   layout = "background" # valid options: page, profile, hero, card, background, custom
   #homepageImage = "IMAGE.jpg" # used in: hero, and card
   showRecent = true
-  showRecentItems = 6
+  showRecentItems = 100
   showMoreLink = false
   showMoreLinkDest = ""
   cardView = true
@@ -69,6 +69,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 
 [article]
+  math = true
   showDate = true
   showViews = false # maybe turn off?
   showLikes = false

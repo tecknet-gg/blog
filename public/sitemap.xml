@@ -3,14 +3,44 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>http://localhost:1313/blog/cv-pipeline/</loc>
+    <lastmod>2026-01-31T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/projects/ball-balancer/</loc>
+    <lastmod>2026-01-31T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2026-01-11T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-31T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/blog/conways-game-of-life/</loc>
+    <lastmod>2026-01-31T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-01-11T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-31T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/projects/pan-tilt-mount/</loc>
+    <lastmod>2026-01-31T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/projects/</loc>
+    <lastmod>2026-01-31T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -22,12 +52,6 @@
   </url>
   <url>
     <loc>http://localhost:1313/projects/electromagnetic-levitator/</loc>
-    <lastmod>2024-02-16T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/projects/</loc>
     <lastmod>2024-02-16T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

@@ -5,10 +5,10 @@ let width, height, cols, rows;
 const RES = 12;
 const SCALE = 0.05; 
 const SPEED = 0.003;
-const COLOR_SPEED = 0.01; 
+const COLOR_SPEED = 0.0; 
 
 let zTime = 0;
-let colorTime = 0;
+let colorTime = 5; //reverted colour changing stuff
 
 // Permutation table for Perlin Noise
 const p = new Uint8Array(512);

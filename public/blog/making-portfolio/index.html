@@ -231,6 +231,10 @@
 
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   
 
   
@@ -620,7 +624,7 @@
 
   <div class="overflow-hidden rounded-md h-36 md:h-56 lg:h-72 nozoom">
     <img
-      src="/images/hugo_hu_bfe010fda223a4aa.png"
+      src="/images/hugo_hu_f9c332d457cba867.png"
       role="presentation"
       loading="eager"
       decoding="async"
@@ -826,60 +830,60 @@
 <p>The only problem was that I&rsquo;m not really a developer. I&rsquo;ve never really messed around with web development at all really, and it wasn&rsquo;t particularly something I was interested in. I keep myself in the domain of Python and maybe some occasional C++ whenever I&rsquo;m working on some hardware projects, but JS, CSS and HTML and what not, and probably won&rsquo;t be something I intend on learning properly any time soon.</p>
 <p>Regardless, I would deem myself at least somewhat competent, and I thought I could make a cool looking website without ever having to really learn web development (now that I say that I realise that wasn&rsquo;t the best attitude to go into this with, but whatever). And in my research for a solution to this very problem I came across <a href="https://gohugo.io/"  target="_blank">Hugo</a>, a really cool, but more importantly easy to use static site generator. Using Hugo, all I would need to do is install a theme and modify the CSS and other configs a bit to my liking, and voila, cool portfolio (notice how its no longer a &ldquo;dev&rdquo; portfolio). A bit of searching later, I saw that <a href="https://blowfish.page/"  target="_blank">Blowfish</a> was all the rage, and so I set up a GitHub repository (so we can host using GitHub Pages), and set about tweaking it to my liking.</p>
 <p>After a good few hours alt-tabbing between the various .toml config files and the docs, and some more painful hours of debugging why GitHub couldn&rsquo;t build it, I had a working site! It was sadly the default Blowfish themed site, and this wouldn&rsquo;t do. Coincidentally, I built this cool looking Perlin Theme in Python the other day:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">import pygame  
-</span></span><span class="line"><span class="cl">import math  
-</span></span><span class="line"><span class="cl">from noise import pnoise3  
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pygame</span>  
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">math</span>  
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">noise</span> <span class="kn">import</span> <span class="n">pnoise3</span>  
 </span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">width, height = 2400, 1600  
-</span></span><span class="line"><span class="cl">res = 16  
-</span></span><span class="line"><span class="cl">scale = 0.005  
-</span></span><span class="line"><span class="cl">speed = 0.01  
-</span></span><span class="line"><span class="cl">fps = 60  
+</span></span><span class="line"><span class="cl"><span class="n">width</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">2400</span><span class="p">,</span> <span class="mi">1600</span>  
+</span></span><span class="line"><span class="cl"><span class="n">res</span> <span class="o">=</span> <span class="mi">16</span>  
+</span></span><span class="line"><span class="cl"><span class="n">scale</span> <span class="o">=</span> <span class="mf">0.005</span>  
+</span></span><span class="line"><span class="cl"><span class="n">speed</span> <span class="o">=</span> <span class="mf">0.01</span>  
+</span></span><span class="line"><span class="cl"><span class="n">fps</span> <span class="o">=</span> <span class="mi">60</span>  
 </span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">top = pygame.Color(31, 80, 255)  
-</span></span><span class="line"><span class="cl">bottom = pygame.Color(255, 0, 0)  
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">def draw():  
-</span></span><span class="line"><span class="cl">    pygame.init()  
-</span></span><span class="line"><span class="cl">    screen = pygame.display.set_mode((width, height))  
-</span></span><span class="line"><span class="cl">    pygame.display.set_caption(&#34;Perlin Thingy&#34;)  
-</span></span><span class="line"><span class="cl">    clock = pygame.time.Clock()  
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">    font = pygame.font.SysFont(&#34;couriernew&#34;, res, bold=True)  
-</span></span><span class="line"><span class="cl">    characters = {&#34;1&#34;: font.render(&#34;1&#34;, True, (255, 255, 255)),&#34;0&#34;: font.render(&#34;0&#34;, True, (255, 255, 255))}  
-</span></span><span class="line"><span class="cl">    z = 0  
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">    while True:  
-</span></span><span class="line"><span class="cl">        for event in pygame.event.get():  
-</span></span><span class="line"><span class="cl">            if event.type == pygame.QUIT:  
-</span></span><span class="line"><span class="cl">                pygame.quit()  
-</span></span><span class="line"><span class="cl">                return  
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">        screen.fill((10, 10, 15))  
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">        for x in range(0, width, res):  
-</span></span><span class="line"><span class="cl">            for y in range(0, height, res):  
-</span></span><span class="line"><span class="cl">                noise = pnoise3(x * scale, y * scale, z, octaves=2)  
-</span></span><span class="line"><span class="cl">                character = characters[&#34;1&#34;] if noise &gt; 0 else characters[&#34;0&#34;]  
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">                fx, fy = x / width, y / height  
-</span></span><span class="line"><span class="cl">                colour = top.lerp(bottom, (fx + fy) / 2)  
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">                brightness = max(50, min(255, int(150 + (noise * 105))))  
-</span></span><span class="line"><span class="cl">                mult = brightness / 255.0  
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">                surface = character.copy()  
-</span></span><span class="line"><span class="cl">                surface.fill((int(colour.r * mult), int(colour.g * mult), int(colour.b * mult)),special_flags=pygame.BLEND_RGB_MULT)  
-</span></span><span class="line"><span class="cl">                screen.blit(surface, (x, y))  
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">        z += speed  
-</span></span><span class="line"><span class="cl">        pygame.display.flip()  
-</span></span><span class="line"><span class="cl">        clock.tick(fps)  
+</span></span><span class="line"><span class="cl"><span class="n">top</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="mi">31</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl"><span class="n">bottom</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  
 </span></span><span class="line"><span class="cl">  
 </span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">if __name__ == &#34;__main__&#34;:  
-</span></span><span class="line"><span class="cl">    draw()</span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>  
+</span></span><span class="line"><span class="cl">    <span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>  
+</span></span><span class="line"><span class="cl">    <span class="n">screen</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">))</span>  
+</span></span><span class="line"><span class="cl">    <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s2">&#34;Perlin Thingy&#34;</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl">    <span class="n">clock</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">Clock</span><span class="p">()</span>  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="n">font</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">SysFont</span><span class="p">(</span><span class="s2">&#34;couriernew&#34;</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">bold</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl">    <span class="n">characters</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;1&#34;</span><span class="p">:</span> <span class="n">font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&#34;1&#34;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)),</span><span class="s2">&#34;0&#34;</span><span class="p">:</span> <span class="n">font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&#34;0&#34;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))}</span>  
+</span></span><span class="line"><span class="cl">    <span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>  
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>  
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>  
+</span></span><span class="line"><span class="cl">                <span class="n">pygame</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>  
+</span></span><span class="line"><span class="cl">                <span class="k">return</span>  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">        <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">res</span><span class="p">):</span>  
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">res</span><span class="p">):</span>  
+</span></span><span class="line"><span class="cl">                <span class="n">noise</span> <span class="o">=</span> <span class="n">pnoise3</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">scale</span><span class="p">,</span> <span class="n">y</span> <span class="o">*</span> <span class="n">scale</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">octaves</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl">                <span class="n">character</span> <span class="o">=</span> <span class="n">characters</span><span class="p">[</span><span class="s2">&#34;1&#34;</span><span class="p">]</span> <span class="k">if</span> <span class="n">noise</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">characters</span><span class="p">[</span><span class="s2">&#34;0&#34;</span><span class="p">]</span>  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">                <span class="n">fx</span><span class="p">,</span> <span class="n">fy</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="n">width</span><span class="p">,</span> <span class="n">y</span> <span class="o">/</span> <span class="n">height</span>  
+</span></span><span class="line"><span class="cl">                <span class="n">colour</span> <span class="o">=</span> <span class="n">top</span><span class="o">.</span><span class="n">lerp</span><span class="p">(</span><span class="n">bottom</span><span class="p">,</span> <span class="p">(</span><span class="n">fx</span> <span class="o">+</span> <span class="n">fy</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">                <span class="n">brightness</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="mi">150</span> <span class="o">+</span> <span class="p">(</span><span class="n">noise</span> <span class="o">*</span> <span class="mi">105</span><span class="p">))))</span>  
+</span></span><span class="line"><span class="cl">                <span class="n">mult</span> <span class="o">=</span> <span class="n">brightness</span> <span class="o">/</span> <span class="mf">255.0</span>  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">                <span class="n">surface</span> <span class="o">=</span> <span class="n">character</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>  
+</span></span><span class="line"><span class="cl">                <span class="n">surface</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="nb">int</span><span class="p">(</span><span class="n">colour</span><span class="o">.</span><span class="n">r</span> <span class="o">*</span> <span class="n">mult</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">colour</span><span class="o">.</span><span class="n">g</span> <span class="o">*</span> <span class="n">mult</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">colour</span><span class="o">.</span><span class="n">b</span> <span class="o">*</span> <span class="n">mult</span><span class="p">)),</span><span class="n">special_flags</span><span class="o">=</span><span class="n">pygame</span><span class="o">.</span><span class="n">BLEND_RGB_MULT</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl">                <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">        <span class="n">z</span> <span class="o">+=</span> <span class="n">speed</span>  
+</span></span><span class="line"><span class="cl">        <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>  
+</span></span><span class="line"><span class="cl">        <span class="n">clock</span><span class="o">.</span><span class="n">tick</span><span class="p">(</span><span class="n">fps</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>  
+</span></span><span class="line"><span class="cl">    <span class="n">draw</span><span class="p">()</span></span></span></code></pre></div></div>
 <p>I spent far too long converting that over to .js, and frankensteining it into Blowfish, but the results are the cool flow-y background theme that we have today. This was the main reason I chose Blowfish as well, since it seemed to handle animated backgrounds pretty well.</p>
 <p>As for the CSS, which handles the theming, I did not have it in me to spend as long as I did on the JS background, half reading Blowfish&rsquo;s docs and half reading JS docs. So I submitted to the demon that is vibe coding and slop generated the CSS. It works. I will hear nothing more of it.</p>
 <p>Anyways for actual content and hosting, I&rsquo;m using Obsidian to handle content generation. I have a few templates set up with the necessary front-matter to make these posts work. To make pushing to GitHub a bit more seamless, I installed a terminal plugin (you can get a plugin for practically anything at this point&hellip;), and now whenever I want to post anything, I just do a cheeky git commit -m and a git push, and voila, we&rsquo;re up. For the custom domain, I managed to get myself this .dev domain for free using name.com&rsquo;s year long free domain that comes with GitHub education. If you&rsquo;re not a student, you can get a cheap .dev domain from Namecheap or similar registrars for relatively cheap, often around £5 for the first year (usually double or so for each year after that). If you don&rsquo;t want to do that, GitHub pages does host it for free under yourusername.github.io.</p>
@@ -921,6 +925,34 @@
     
     <footer class="pt-8 max-w-prose print:hidden">
       
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/blog/conways-game-of-life/">
+              <span class="leading-6">
+                Conway's Game Of Life in Verilog&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-01-31T00:00:00&#43;00:00">January 31, 2026</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
   
 
 

@@ -9,7 +9,27 @@
     <managingEditor>hattijeevan@example.com (Jeevan Hatti)</managingEditor>
     <webMaster>hattijeevan@example.com (Jeevan Hatti)</webMaster>
     <copyright>© 2026 tecknet.gg</copyright>
-    <lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A Very Volatile CV Pipeline</title>
+      <link>http://localhost:1313/blog/cv-pipeline/</link>
+      <pubDate>Sat, 31 Jan 2026 00:00:00 +0000</pubDate>
+      <author>hattijeevan@example.com (Jeevan Hatti)</author>
+      <guid>http://localhost:1313/blog/cv-pipeline/</guid>
+      <description>Actually somewhat resilient (somehow)!</description>
+      
+    </item>
+    
+    <item>
+      <title>Conway&#39;s Game Of Life in Verilog</title>
+      <link>http://localhost:1313/blog/conways-game-of-life/</link>
+      <pubDate>Sat, 31 Jan 2026 00:00:00 +0000</pubDate>
+      <author>hattijeevan@example.com (Jeevan Hatti)</author>
+      <guid>http://localhost:1313/blog/conways-game-of-life/</guid>
+      <description>Implement Conway&amp;rsquo;s Game of Life using Verilog, and mayhaps an FPGA?</description>
+      
+    </item>
     
     <item>
       <title>Making a portfolio with Hugo and Obsidian</title>

@@ -31,6 +31,8 @@ enableEmoji = true
   customCss = ["css/custom.css"]
   defaultAppearance = "dark"
   disableAppearanceLink = true
+  math = true
+
 
 [imaging]
   anchor = 'Center'

@@ -20,7 +20,7 @@ Regardless, I would deem myself at least somewhat competent, and I thought I cou
 
 After a good few hours alt-tabbing between the various .toml config files and the docs, and some more painful hours of debugging why GitHub couldn't build it, I had a working site! It was sadly the default Blowfish themed site, and this wouldn't do. Coincidentally, I built this cool looking Perlin Theme in Python the other day:
 
-```
+```python
 import pygame  
 import math  
 from noise import pnoise3  
