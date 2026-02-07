@@ -5,7 +5,7 @@ showPagination: false
 showRecent: true
 ---
 
-Hello! Welcome to my very professional blog/portfolio/internet residence thing. You can find some cool stuff around here hopefully, maybe a blog or two about some computer science-y stuff, or a stupid project that I took on, maybe an occasional book review, or some other thing I liked. Have fun :]
+Hello! Welcome to my very professional blog/portfolio/internet thing. You can find some cool stuff around here hopefully, maybe a blog or two about some computer science-y stuff, or a stupid project that I took on, maybe an occasional book review, or some more random stuff.
 
 <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
 <script>

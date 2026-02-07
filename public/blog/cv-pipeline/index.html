@@ -399,7 +399,7 @@
     "keywords": ["Programming","CV","Python"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "3275"
+    "wordCount": "3289"
   }]
   </script>
 
@@ -855,7 +855,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-01-31T00:00:00&#43;00:00">January 31, 2026</time><span class="px-2 text-primary-500">&middot;</span><span>3275 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">16 mins</span>
+      <time datetime="2026-01-31T00:00:00&#43;00:00">January 31, 2026</time><span class="px-2 text-primary-500">&middot;</span><span>3289 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">16 mins</span>
     
 
     
@@ -978,11 +978,22 @@
     srcset="/images/ballbalancer_hu_d283c717b2af185a.png 800w, /images/ballbalancer_hu_3a1b2986b11d630d.png 1280w"
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/images/ballbalancer.png"></figure>
-<p>I&rsquo;ve left most of the hardware details to its own post (that I will eventually get to..). I just wanted to cover the really janky CV loop that I&rsquo;ve managed to implement. But I suppose it would be apt to cover the actual camera since it explains some of the stupid decisions I had to make later on. I kind screwed myself from the get-go, since I&rsquo;m just a moron. Basically when I was going to buy parts, I initially landed on the Raspberry Pi Camera Module 3, it was an obvious choice, easily integrated with the microcontroller + cheap. When I was about to add to cart, there were two options, a default, green PCB version, and a NoIR version, with a black PCB. I don&rsquo;t know how this happened, but I bought the NoIR version, because cool black PCB, and I thought that was it, just a play on the being the French word for black (which I&rsquo;m sure is still true, but less important than the other bit). Turns out NoIR, means it lacks an IR filter (duh!). And so now I have a camera which occasionally turns a brilliant shade of magenta whenever the white balance decides to not work. Fun!</p>
+<p>I&rsquo;ve left most of the hardware details to its own post (that I will eventually get to..). I just wanted to cover the really janky CV loop that I&rsquo;ve managed to implement. But I suppose it would be apt to cover the actual camera since it explains some of the stupid decisions I had to make later on. I kind screwed myself from the get-go, since I am just a moron. Basically when I was going to buy parts, I initially landed on the Raspberry Pi Camera Module 3, it was an obvious choice, easily integrated with the microcontroller + cheap. When I was about to add to cart, there were two options, a default, green PCB version, and a NoIR version, with a black PCB. I don&rsquo;t know how this happened, but I bought the NoIR version, because cool black PCB, and I thought that was it, just a play on the being the French word for black (which I&rsquo;m sure is still true, but less important than the other bit). Turns out NoIR, means it lacks an IR filter (duh!). And so now I have a camera which occasionally turns a brilliant shade of magenta whenever the white balance decides to not work. Fun!</p>
 <p>The real kicker is that the original module, had too low an FOV, so I bought another camera module with a fisheye lense. At this point, I hadn&rsquo;t yet understood that it was NoIR. And so I bought another NoIR camera. After already blowing a solid £30 on cameras, after I realised my mistake, there was no going back, and so I decided to fix it in software (not fun).</p>
-<p>[Add picture of magentification of screen]</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Magenta-ification"
+    width="731"
+    height="727"
+    src="/images/magentacv.png"
+    srcset="/images/magentacv.png 800w, /images/magentacv.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/images/magentacv.png"></figure>
 <p>And with that in mind, I had to devise the requirements of my CV algorithm (on the fly of course). It had to be low latency, since my processing stack had me serving frames over HTTPS (implementing my own UDP stream is not something I want to do), and waiting for a response with the coordinates (did use UDP there), minimising processing time was somewhat important. Though in the end, I completely ignored this requirement. The more important ones were regarding the speed of the ball it can actually track. I wanted it to be able to track the ball even if its moving pretty fast across the screen. The hardest requirement was getting around the noise. I have a really cramped desk, and the frame of the balancer is really cluttered, plus living in the UK, the sun was setting at 3pm, till not too long ago, and so when I would work on it after school, the lighting would change drastically, and break my loop. And so my algorithm would have to be resilient to changes in lighting, and try and filter out noise as much as possible, whilst being fast.</p>
-<p>Suffice to say, those are quite hefty requirements, especially for someone who&rsquo;s never messed around with CV. And so I got stuck in. The first decision I had to make was on which broad algorithm to use. The two real options were the popular Hough Transform, and the Contour Dete tion.</p>
+<p>Suffice to say, those are quite hefty requirements, especially for someone who&rsquo;s never messed around with CV. And so I got stuck in. The first decision I had to make was on which broad algorithm to use. The two real options were the Hough Transform, and the Contour Detection.</p>
 
 <h2 class="relative group">Hough Transform
     <div id="hough-transform" class="anchor"></div>
@@ -1206,9 +1217,9 @@ Where \(S_t\) = smoothed position, \(\alpha\) = dynamic alpha (how much to trust
     </span>
     
 </h3>
-<p>Know we have all the important bits of post-processing done, we just calculate the velocity based on old data, and package it into a nice list, and we send it off to our ball balancer to deal with. We also do some fancy annotations onto our frame, with the RoIs, and a circle highlighting the detected ball, and a marker for its centre.</p>
+<p>Now we have all the important bits of post-processing done, we just calculate the velocity based on old data, and package it into a nice list, and we send it off to our ball balancer to deal with. We also do some fancy annotations onto our frame, with the RoIs, and a circle highlighting the detected ball, and a marker for its centre.</p>
 <p>The remaining 80% of the code in my CV script is just supporting architecture, doing stuff like handling missing frames, packaging and sending data, ensuring we&rsquo;re being served frames, etc. The boring stuff.</p>
-<p>This is my entire function (with the supporting architecture)</p>
+<p>This is my entire function (with the supporting architecture):</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">processFrame</span><span class="p">(</span><span class="n">frame</span><span class="p">):</span>  
 </span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">ballCenter</span><span class="p">,</span> <span class="n">lastKnownCenter</span><span class="p">,</span> <span class="n">missingFrames</span><span class="p">,</span> <span class="n">emaCenter</span><span class="p">,</span> <span class="n">isLocked</span><span class="p">,</span> <span class="n">velocity</span><span class="p">,</span> <span class="n">lastFrameTime</span><span class="p">,</span> <span class="n">relCenter</span><span class="p">,</span> <span class="n">latestBlurred</span><span class="p">,</span> <span class="n">lastRawCenter</span>  
 </span></span><span class="line"><span class="cl">    <span class="n">currentTime</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>  
@@ -1344,6 +1355,15 @@ Where \(S_t\) = smoothed position, \(\alpha\) = dynamic alpha (how much to trust
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">frame</span></span></span></code></pre></div></div>
 <p>I apologise for my obscenely long function.. I was going to refactor it eventually..</p>
 <p>The other helpers to aid with streaming and whatnot can be found at my <a href="https://github.com/tecknet-gg/Ball-Balancer"  target="_blank">GitHub</a>.</p>
+<p>Here&rsquo;s a cool little demonstration of it doings its thing!</p>
+<figure>
+  <video
+    class="w-full rounded-md aspect-video object-contain"preload="metadata" controls playsinline>
+    <source src="/videos/demopantilt.mp4">
+    <p>Your browser cannot play this video. <a href="/videos/demopantilt.mp4">Download video</a>.</p>
+  </video><figcaption>Demo Pan-Tilt Video</figcaption>
+</figure>
+
 <p>Thanks for reading!</p>
 
           
@@ -1372,8 +1392,8 @@ Where \(S_t\) = smoothed position, \(\alpha\) = dynamic alpha (how much to trust
           type="text/javascript"
           src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
           integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
-          data-oid="views_blog/CV Pipeline.md"
-          data-oid-likes="likes_blog/CV Pipeline.md"></script>
+          data-oid="views_blog/cv pipeline.md"
+          data-oid-likes="likes_blog/cv pipeline.md"></script>
       
     </section>
 

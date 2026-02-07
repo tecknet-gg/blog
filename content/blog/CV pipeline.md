@@ -21,15 +21,15 @@ I think the decision to use CV was rather obvious. It gave me the most freedom i
 
 ![Ball Balancer 3D Model](images/ballbalancer.png)
 
-I've left most of the hardware details to its own post (that I will eventually get to..). I just wanted to cover the really janky CV loop that I've managed to implement. But I suppose it would be apt to cover the actual camera since it explains some of the stupid decisions I had to make later on. I kind screwed myself from the get-go, since I'm just a moron. Basically when I was going to buy parts, I initially landed on the Raspberry Pi Camera Module 3, it was an obvious choice, easily integrated with the microcontroller + cheap. When I was about to add to cart, there were two options, a default, green PCB version, and a NoIR version, with a black PCB. I don't know how this happened, but I bought the NoIR version, because cool black PCB, and I thought that was it, just a play on the being the French word for black (which I'm sure is still true, but less important than the other bit). Turns out NoIR, means it lacks an IR filter (duh!). And so now I have a camera which occasionally turns a brilliant shade of magenta whenever the white balance decides to not work. Fun!
+I've left most of the hardware details to its own post (that I will eventually get to..). I just wanted to cover the really janky CV loop that I've managed to implement. But I suppose it would be apt to cover the actual camera since it explains some of the stupid decisions I had to make later on. I kind screwed myself from the get-go, since I am just a moron. Basically when I was going to buy parts, I initially landed on the Raspberry Pi Camera Module 3, it was an obvious choice, easily integrated with the microcontroller + cheap. When I was about to add to cart, there were two options, a default, green PCB version, and a NoIR version, with a black PCB. I don't know how this happened, but I bought the NoIR version, because cool black PCB, and I thought that was it, just a play on the being the French word for black (which I'm sure is still true, but less important than the other bit). Turns out NoIR, means it lacks an IR filter (duh!). And so now I have a camera which occasionally turns a brilliant shade of magenta whenever the white balance decides to not work. Fun!
 
 The real kicker is that the original module, had too low an FOV, so I bought another camera module with a fisheye lense. At this point, I hadn't yet understood that it was NoIR. And so I bought another NoIR camera. After already blowing a solid £30 on cameras, after I realised my mistake, there was no going back, and so I decided to fix it in software (not fun).
 
-[Add picture of magentification of screen]
+![Magenta-ification](images/magentacv.png)
 
 And with that in mind, I had to devise the requirements of my CV algorithm (on the fly of course). It had to be low latency, since my processing stack had me serving frames over HTTPS (implementing my own UDP stream is not something I want to do), and waiting for a response with the coordinates (did use UDP there), minimising processing time was somewhat important. Though in the end, I completely ignored this requirement. The more important ones were regarding the speed of the ball it can actually track. I wanted it to be able to track the ball even if its moving pretty fast across the screen. The hardest requirement was getting around the noise. I have a really cramped desk, and the frame of the balancer is really cluttered, plus living in the UK, the sun was setting at 3pm, till not too long ago, and so when I would work on it after school, the lighting would change drastically, and break my loop. And so my algorithm would have to be resilient to changes in lighting, and try and filter out noise as much as possible, whilst being fast.
 
-Suffice to say, those are quite hefty requirements, especially for someone who's never messed around with CV. And so I got stuck in. The first decision I had to make was on which broad algorithm to use. The two real options were the popular Hough Transform, and the Contour Dete tion. 
+Suffice to say, those are quite hefty requirements, especially for someone who's never messed around with CV. And so I got stuck in. The first decision I had to make was on which broad algorithm to use. The two real options were the Hough Transform, and the Contour Detection. 
 
 ## Hough Transform
 
@@ -190,12 +190,12 @@ emaCenter = (dynamicAlpha * newCenter) + ((1 - dynamicAlpha) * emaCenter)
 ```
 
 ### Other stuff
-Know we have all the important bits of post-processing done, we just calculate the velocity based on old data, and package it into a nice list, and we send it off to our ball balancer to deal with. We also do some fancy annotations onto our frame, with the RoIs, and a circle highlighting the detected ball, and a marker for its centre. 
+Now we have all the important bits of post-processing done, we just calculate the velocity based on old data, and package it into a nice list, and we send it off to our ball balancer to deal with. We also do some fancy annotations onto our frame, with the RoIs, and a circle highlighting the detected ball, and a marker for its centre. 
 
 
 The remaining 80% of the code in my CV script is just supporting architecture, doing stuff like handling missing frames, packaging and sending data, ensuring we're being served frames, etc. The boring stuff.
 
-This is my entire function (with the supporting architecture)
+This is my entire function (with the supporting architecture):
 
 ```python
 def processFrame(frame):  
@@ -336,5 +336,10 @@ def processFrame(frame):
 I apologise for my obscenely long function.. I was going to refactor it eventually..
 
 The other helpers to aid with streaming and whatnot can be found at my [GitHub](https://github.com/tecknet-gg/Ball-Balancer). 
+
+Here's a cool little demonstration of it doings its thing!
+
+{{< video src="videos/demopantilt.mp4" caption="Demo Pan-Tilt Video" controls=true >}}
+
 
 Thanks for reading!
