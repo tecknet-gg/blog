@@ -10,7 +10,7 @@ tags:
 featureImage: images/cvcover.png
 showReadingTime: true
 toc: "false"
-draft: true
+draft: false
 math: "true"
 ---
 {{< katex >}}
