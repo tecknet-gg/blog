@@ -33,12 +33,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/projects/pan-tilt-mount/</loc>
-    <lastmod>2026-01-31T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://localhost:1313/projects/</loc>
     <lastmod>2026-01-31T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
@@ -47,6 +41,12 @@
   <url>
     <loc>http://localhost:1313/blog/making-portfolio/</loc>
     <lastmod>2026-01-11T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/projects/pan-tilt-mount/</loc>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

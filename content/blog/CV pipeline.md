@@ -10,7 +10,7 @@ tags:
 featureImage: images/cvcover.png
 showReadingTime: true
 toc: "false"
-draft: false
+draft: true
 math: "true"
 ---
 {{< katex >}}
@@ -21,7 +21,7 @@ I think the decision to use CV was rather obvious. It gave me the most freedom i
 
 ![Ball Balancer 3D Model](images/ballbalancer.png)
 
-I've left most of the hardware details to its own post (that I will eventually get to..). I just wanted to cover the really janky CV loop that I've managed to implement. But I suppose it would be apt to cover the actual camera since it explains some of the stupid decisions I had to make later on. I kind screwed myself from the get-go, since I am just a moron. Basically when I was going to buy parts, I initially landed on the Raspberry Pi Camera Module 3, it was an obvious choice, easily integrated with the microcontroller + cheap. When I was about to add to cart, there were two options, a default, green PCB version, and a NoIR version, with a black PCB. I don't know how this happened, but I bought the NoIR version, because cool black PCB, and I thought that was it, just a play on the being the French word for black (which I'm sure is still true, but less important than the other bit). Turns out NoIR, means it lacks an IR filter (duh!). And so now I have a camera which occasionally turns a brilliant shade of magenta whenever the white balance decides to not work. Fun!
+I've left most of the hardware details to its own post (that I will eventually get to..). I just wanted to cover the really janky CV loop that I've managed to implement. But I suppose it would be apt to cover the actual camera since it explains some of the stupid decisions I had to make later on. I kind screwed myself from the get-go, since I am just a moron. Basically when I was going to buy parts, I initially landed on the Raspberry Pi Camera Module 3, it was an obvious choice, easily integrated with the microcontroller + cheap. When I was about to add to cart, there were two options, a default, green PCB version, and a NoIR version, with a black PCB. I don't know how this happened, but I bought the NoIR version, because cool black PCB, and I thought that was it, just a play on it being the French word for black (which I'm sure is still true, but less important than the other bit). Turns out NoIR, means it lacks an IR filter (duh!). And so now I have a camera which occasionally turns a brilliant shade of magenta whenever the white balance decides to not work. Fun!
 
 The real kicker is that the original module, had too low an FOV, so I bought another camera module with a fisheye lense. At this point, I hadn't yet understood that it was NoIR. And so I bought another NoIR camera. After already blowing a solid £30 on cameras, after I realised my mistake, there was no going back, and so I decided to fix it in software (not fun).
 
@@ -37,7 +37,7 @@ So the Hough Transform is a pretty popular detection algorithm. It can be used t
 
 The Hough Transform doesn't work with pixels per se, but more with edges. And so we need to first pre-process the image with edge detection. Edge detection can be done with a variety of algorithms, but Canny is the one typically used in this context. It takes an image, converts it to grayscale, and to detect edges, it looks for rapid changes in intensity. A dark to light transition would indicate an edge. An image in a typical colourspace isn't used since an edge could appear in any of the one channels, but not the other, but in a grayscale image, the edge is detected, regardless of hue.
 
-So we feed the algorithm an image with only the edges. And now the voting. For simplicities sake, lets say we have a fixed radius. For each point thats in the edge (represented as a 1 in the array), we fit a circle, of predetermined radius to it. How do you fit a circle with only one point and the radius? The simplest way to define the radius as being tilted at a certain angle Θ from the horizontal, and then fit the centre since you know the radius, and repeat for all angles of Θ between 0 and 2π. You define an accumulator array, and for each coordinate you generate, you update the accumulator's corresponding index by one. In the end you'll have an array with a the "votes", of all edge pixels. Then its a matter of looking at which edge centre has received the most "votes", et voila, you have a circle!
+So we feed the algorithm an image with only the edges. And now the voting. For simplicities sake, lets say we have a fixed radius. For each point thats in the edge (represented as a 1 in the array), we fit a circle, of predetermined radius to it. How do you fit a circle with only one point and the radius? The simplest way is consider the radius at each angle \(\theta\) between \(0\) and \(\pi\), and compute the corresponding centres. You then define an accumulator array, and for each coordinate you generate, you update the accumulator's corresponding coordinate index index by one. In the end you'll have an array with a the "votes", of all edge pixels. Then its a matter of looking at which centre has received the most "votes", et voila, you have a circle!
 
 Here is an example pipeline.
 You take a raw image:
@@ -60,6 +60,10 @@ yielding:
 ![Edges](images/edgeshough.png)
 
 With this in hand, you do some precomputing of all values of \(\cos{\theta}\) and \(\sin{\theta}\) to save having to do it each time, and then you fit centres for all points that are on the edges.
+
+I couldn't code a good looking accumulator animation after twiddling around with matplotlib and even manim for a bit, so here's this [cool graphic](https://medium.com/@isinsuarici/hough-circle-transform-in-opencv-d74bdf5161ed) I found on the internet.
+
+![Accumulator](images/accumulator.png)
 
 ```python
 edgesProcessed = (edges/255).astype(np.uint8)  
@@ -337,7 +341,7 @@ I apologise for my obscenely long function.. I was going to refactor it eventual
 
 The other helpers to aid with streaming and whatnot can be found at my [GitHub](https://github.com/tecknet-gg/Ball-Balancer). 
 
-Here's a cool little demonstration of it doings its thing!
+Here's a cool little demonstration of it doings its thing (it may just be a placeholder for now..)!
 
 {{< video src="videos/demopantilt.mp4" caption="Demo Pan-Tilt Video" controls=true >}}
 

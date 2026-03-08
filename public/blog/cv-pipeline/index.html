@@ -399,7 +399,7 @@
     "keywords": ["Programming","CV","Python"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "3289"
+    "wordCount": "3309"
   }]
   </script>
 
@@ -855,18 +855,10 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-01-31T00:00:00&#43;00:00">January 31, 2026</time><span class="px-2 text-primary-500">&middot;</span><span>3289 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">16 mins</span>
+      <time datetime="2026-01-31T00:00:00&#43;00:00">January 31, 2026</time><span class="px-2 text-primary-500">&middot;</span><span>3309 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">16 mins</span>
     
 
     
-    
-      <span class="ps-2"><span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Draft
-  </span>
-</span>
-</span>
     
   </div>
 
@@ -978,7 +970,7 @@
     srcset="/images/ballbalancer_hu_d283c717b2af185a.png 800w, /images/ballbalancer_hu_3a1b2986b11d630d.png 1280w"
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/images/ballbalancer.png"></figure>
-<p>I&rsquo;ve left most of the hardware details to its own post (that I will eventually get to..). I just wanted to cover the really janky CV loop that I&rsquo;ve managed to implement. But I suppose it would be apt to cover the actual camera since it explains some of the stupid decisions I had to make later on. I kind screwed myself from the get-go, since I am just a moron. Basically when I was going to buy parts, I initially landed on the Raspberry Pi Camera Module 3, it was an obvious choice, easily integrated with the microcontroller + cheap. When I was about to add to cart, there were two options, a default, green PCB version, and a NoIR version, with a black PCB. I don&rsquo;t know how this happened, but I bought the NoIR version, because cool black PCB, and I thought that was it, just a play on the being the French word for black (which I&rsquo;m sure is still true, but less important than the other bit). Turns out NoIR, means it lacks an IR filter (duh!). And so now I have a camera which occasionally turns a brilliant shade of magenta whenever the white balance decides to not work. Fun!</p>
+<p>I&rsquo;ve left most of the hardware details to its own post (that I will eventually get to..). I just wanted to cover the really janky CV loop that I&rsquo;ve managed to implement. But I suppose it would be apt to cover the actual camera since it explains some of the stupid decisions I had to make later on. I kind screwed myself from the get-go, since I am just a moron. Basically when I was going to buy parts, I initially landed on the Raspberry Pi Camera Module 3, it was an obvious choice, easily integrated with the microcontroller + cheap. When I was about to add to cart, there were two options, a default, green PCB version, and a NoIR version, with a black PCB. I don&rsquo;t know how this happened, but I bought the NoIR version, because cool black PCB, and I thought that was it, just a play on it being the French word for black (which I&rsquo;m sure is still true, but less important than the other bit). Turns out NoIR, means it lacks an IR filter (duh!). And so now I have a camera which occasionally turns a brilliant shade of magenta whenever the white balance decides to not work. Fun!</p>
 <p>The real kicker is that the original module, had too low an FOV, so I bought another camera module with a fisheye lense. At this point, I hadn&rsquo;t yet understood that it was NoIR. And so I bought another NoIR camera. After already blowing a solid £30 on cameras, after I realised my mistake, there was no going back, and so I decided to fix it in software (not fun).</p>
 <figure><img
     class="my-0 rounded-md"
@@ -1006,7 +998,7 @@
 </h2>
 <p>So the Hough Transform is a pretty popular detection algorithm. It can be used to detect practically any shape from an image. In essence, the pixels of the image &ldquo;vote&rdquo; for the geometry that its part of. Essentially, instead of asking, &ldquo;which pixels form a circle?&rdquo;, it asks the pixel, if it were part of a circle, where it would be. Sounds counterintuitive, but bear with me.</p>
 <p>The Hough Transform doesn&rsquo;t work with pixels per se, but more with edges. And so we need to first pre-process the image with edge detection. Edge detection can be done with a variety of algorithms, but Canny is the one typically used in this context. It takes an image, converts it to grayscale, and to detect edges, it looks for rapid changes in intensity. A dark to light transition would indicate an edge. An image in a typical colourspace isn&rsquo;t used since an edge could appear in any of the one channels, but not the other, but in a grayscale image, the edge is detected, regardless of hue.</p>
-<p>So we feed the algorithm an image with only the edges. And now the voting. For simplicities sake, lets say we have a fixed radius. For each point thats in the edge (represented as a 1 in the array), we fit a circle, of predetermined radius to it. How do you fit a circle with only one point and the radius? The simplest way to define the radius as being tilted at a certain angle Θ from the horizontal, and then fit the centre since you know the radius, and repeat for all angles of Θ between 0 and 2π. You define an accumulator array, and for each coordinate you generate, you update the accumulator&rsquo;s corresponding index by one. In the end you&rsquo;ll have an array with a the &ldquo;votes&rdquo;, of all edge pixels. Then its a matter of looking at which edge centre has received the most &ldquo;votes&rdquo;, et voila, you have a circle!</p>
+<p>So we feed the algorithm an image with only the edges. And now the voting. For simplicities sake, lets say we have a fixed radius. For each point thats in the edge (represented as a 1 in the array), we fit a circle, of predetermined radius to it. How do you fit a circle with only one point and the radius? The simplest way is consider the radius at each angle \(\theta\) between \(0\) and \(\pi\), and compute the corresponding centres. You then define an accumulator array, and for each coordinate you generate, you update the accumulator&rsquo;s corresponding coordinate index index by one. In the end you&rsquo;ll have an array with a the &ldquo;votes&rdquo;, of all edge pixels. Then its a matter of looking at which centre has received the most &ldquo;votes&rdquo;, et voila, you have a circle!</p>
 <p>Here is an example pipeline.
 You take a raw image:
 <figure><img
@@ -1053,6 +1045,19 @@ Then this image is fed into an edge detector (Canny in this case):</p>
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/images/edgeshough.png"></figure>
 <p>With this in hand, you do some precomputing of all values of \(\cos{\theta}\) and \(\sin{\theta}\) to save having to do it each time, and then you fit centres for all points that are on the edges.</p>
+<p>I couldn&rsquo;t code a good looking accumulator animation after twiddling around with matplotlib and even manim for a bit, so here&rsquo;s this <a href="https://medium.com/@isinsuarici/hough-circle-transform-in-opencv-d74bdf5161ed"  target="_blank">cool graphic</a> I found on the internet.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Accumulator"
+    width="945"
+    height="486"
+    src="/images/accumulator_hu_2140b6ce8a60a1e4.png"
+    srcset="/images/accumulator_hu_2140b6ce8a60a1e4.png 800w, /images/accumulator.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/images/accumulator.png"></figure>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">edgesProcessed</span> <span class="o">=</span> <span class="p">(</span><span class="n">edges</span><span class="o">/</span><span class="mi">255</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>  
 </span></span><span class="line"><span class="cl"><span class="n">rows</span><span class="p">,</span> <span class="n">cols</span> <span class="o">=</span> <span class="n">edgesProcessed</span><span class="o">.</span><span class="n">shape</span>  
 </span></span><span class="line"><span class="cl"><span class="n">accumulator</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">),</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span> <span class="c1">#set up accumulator  </span>
@@ -1355,7 +1360,7 @@ Where \(S_t\) = smoothed position, \(\alpha\) = dynamic alpha (how much to trust
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">frame</span></span></span></code></pre></div></div>
 <p>I apologise for my obscenely long function.. I was going to refactor it eventually..</p>
 <p>The other helpers to aid with streaming and whatnot can be found at my <a href="https://github.com/tecknet-gg/Ball-Balancer"  target="_blank">GitHub</a>.</p>
-<p>Here&rsquo;s a cool little demonstration of it doings its thing!</p>
+<p>Here&rsquo;s a cool little demonstration of it doings its thing (it may just be a placeholder for now..)!</p>
 <figure>
   <video
     class="w-full rounded-md aspect-video object-contain"preload="metadata" controls playsinline>

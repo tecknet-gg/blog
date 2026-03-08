@@ -2,7 +2,7 @@
 title: Making a portfolio with Hugo and Obsidian
 date: 2026-01-11
 description:
-summary: Building a site using Hugo and Obsidian
+summary: Building a site using Hugo and Obsidian (because why not?)
 tags:
   - website
   - hugo
