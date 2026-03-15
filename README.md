@@ -5,3 +5,4 @@ Besides the custom theming, the content distribution is handled through obsidian
 As for the purpose of the blog, its mainly just an archive of the projects I take on, and the cool things I learn on the way! I have a few other sections for book reviews and art, if I ever get to uploading any! 
 
 Give it a visit at: https://tecknet.dev
+
