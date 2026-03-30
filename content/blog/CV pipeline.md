@@ -343,7 +343,7 @@ The other helpers to aid with streaming and whatnot can be found at my [GitHub](
 
 Here's a cool little demonstration of it doings its thing (it may just be a placeholder for now..)!
 
-{{< video src="videos/demopantilt.mp4" caption="Demo Pan-Tilt Video" controls=true >}}
+{{< video src="videos/balltracking.mov" caption="Ball Tracking Demo" controls=true >}}
 
 
 Thanks for reading!
