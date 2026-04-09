@@ -145,7 +145,7 @@ blurredFrame = cv2.GaussianBlur(maskedGray, (9, 9), 0)
 
 The type of blur used is a point of contention. The two main blurs are Median and Gaussian. I won't get into the details, but the Median blur preserves edges better than Gaussian does. It also gets rid of "salt and pepper" noise, as in that of small specks. Gaussian blur is more general purpose, and does ruin the definition of edges, though it is better at cleaning raw sensor noise. 
 
-For my application, it would be more suitable to use a Median blur since its edge preservation is advantageous for faster moving objects. I don't quite remember when in the development cycle I switched to Gaussian from Median, but I haven't switched back since my CV pipeline is working really well now, and you know the saying.. if it ain't broke, don't fix it. I'm using a relatively large kernel size (size of the array of pixels it take in batches to blur). I settled on a relatively larger kernel size, you should probably go for a lower one, but the heavier blur is useful to get rid of as much noise as possible.
+For my application, it would be more suitable to use a Median blur since its edge preservation is advantageous for faster moving objects. I don't quite remember when in the development cycle I switched to Gaussian from Median, but I haven't switched back since my CV pipeline is working really well now, and you know the saying.. if it ain't broke, don't fix it. I'm using a relatively large kernel size (size of the array of pixels it take in batches to blur). A lower Kernel size might be somewhat advantageous since its better at cleaning out noise, but a larger kernel size reduces compute time.
 
 ## Processing
 I don't actually have to implement my own Hough Circle Transform algorithm, the OpenCV library has an implementation thats leagues better than something I could achieve. 
@@ -179,7 +179,7 @@ Now that we have our detected circles, we need to validate its what we wanted. I
 I then swatch the pixels in the centre of the detected ball, for their colour, in a predefined radius. I calculate what percent of HSV is in my range, and if its above my threshold, I accept that detection.
 
 ### Exponential Moving Average (EMA)
-Since we're processing at a discrete frame rate, we're essentially sampling the coordinates of the ball a set number of times a second. In reality of course, the ball isn't teleporting between points at a certain frame rate. To account for that in our data, we use EMA, which smooths our the detected coordinates. 
+Since we're processing at a discrete frame rate, we're essentially sampling the coordinates of the ball a set number of times a second. In reality of course, the ball isn't teleporting between points at a certain frame rate. To account for that in our data, we use EMA, which smooths out the detected coordinates. 
 
 The formula:
 $$
