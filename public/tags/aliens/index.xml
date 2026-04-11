@@ -1,33 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bookshelf on </title>
-    <link>http://localhost:1313/book/</link>
-    <description>Recent content in Bookshelf on </description>
+    <title>Aliens on </title>
+    <link>http://localhost:1313/tags/aliens/</link>
+    <description>Recent content in Aliens on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>hattijeevan@example.com (Jeevan Hatti)</managingEditor>
     <webMaster>hattijeevan@example.com (Jeevan Hatti)</webMaster>
     <copyright>© 2026 tecknet.gg</copyright>
-    <lastBuildDate>Thu, 09 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/book/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/aliens/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Project Hail Mary</title>
+      <title></title>
       <link>http://localhost:1313/book/untitled/</link>
       <pubDate>Thu, 09 Apr 2026 00:00:00 +0000</pubDate>
       <author>hattijeevan@example.com (Jeevan Hatti)</author>
       <guid>http://localhost:1313/book/untitled/</guid>
       <description>Humanity&amp;rsquo;s only chance of survival is a singular amnesiac science teacher in space.</description>
-      
-    </item>
-    
-    <item>
-      <title>Leviathan Trilogy</title>
-      <link>http://localhost:1313/book/leviathan/</link>
-      <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
-      <author>hattijeevan@example.com (Jeevan Hatti)</author>
-      <guid>http://localhost:1313/book/leviathan/</guid>
-      <description>Son of Franz Ferdinand goes on a Globe-Trotting adventure</description>
       
     </item>
     
