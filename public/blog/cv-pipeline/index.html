@@ -399,7 +399,7 @@
     "keywords": ["Programming","CV","Python"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "3309"
+    "wordCount": "3301"
   }]
   </script>
 
@@ -855,7 +855,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-01-31T00:00:00&#43;00:00">January 31, 2026</time><span class="px-2 text-primary-500">&middot;</span><span>3309 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">16 mins</span>
+      <time datetime="2026-01-31T00:00:00&#43;00:00">January 31, 2026</time><span class="px-2 text-primary-500">&middot;</span><span>3301 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">16 mins</span>
     
 
     
@@ -1144,7 +1144,7 @@ That would give us a number on a scale of 0 to 1. 1 means its a perfect circle. 
 <p>And then apply a blur.</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">blurredFrame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="n">maskedGray</span><span class="p">,</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span></span></span></code></pre></div></div>
 <p>The type of blur used is a point of contention. The two main blurs are Median and Gaussian. I won&rsquo;t get into the details, but the Median blur preserves edges better than Gaussian does. It also gets rid of &ldquo;salt and pepper&rdquo; noise, as in that of small specks. Gaussian blur is more general purpose, and does ruin the definition of edges, though it is better at cleaning raw sensor noise.</p>
-<p>For my application, it would be more suitable to use a Median blur since its edge preservation is advantageous for faster moving objects. I don&rsquo;t quite remember when in the development cycle I switched to Gaussian from Median, but I haven&rsquo;t switched back since my CV pipeline is working really well now, and you know the saying.. if it ain&rsquo;t broke, don&rsquo;t fix it. I&rsquo;m using a relatively large kernel size (size of the array of pixels it take in batches to blur). I settled on a relatively larger kernel size, you should probably go for a lower one, but the heavier blur is useful to get rid of as much noise as possible.</p>
+<p>For my application, it would be more suitable to use a Median blur since its edge preservation is advantageous for faster moving objects. I don&rsquo;t quite remember when in the development cycle I switched to Gaussian from Median, but I haven&rsquo;t switched back since my CV pipeline is working really well now, and you know the saying.. if it ain&rsquo;t broke, don&rsquo;t fix it. I&rsquo;m using a relatively large kernel size (size of the array of pixels it take in batches to blur). A lower Kernel size might be somewhat advantageous since its better at cleaning out noise, but a larger kernel size reduces compute time.</p>
 
 <h2 class="relative group">Processing
     <div id="processing" class="anchor"></div>
@@ -1203,7 +1203,7 @@ That would give us a number on a scale of 0 to 1. 1 means its a perfect circle. 
     </span>
     
 </h3>
-<p>Since we&rsquo;re processing at a discrete frame rate, we&rsquo;re essentially sampling the coordinates of the ball a set number of times a second. In reality of course, the ball isn&rsquo;t teleporting between points at a certain frame rate. To account for that in our data, we use EMA, which smooths our the detected coordinates.</p>
+<p>Since we&rsquo;re processing at a discrete frame rate, we&rsquo;re essentially sampling the coordinates of the ball a set number of times a second. In reality of course, the ball isn&rsquo;t teleporting between points at a certain frame rate. To account for that in our data, we use EMA, which smooths out the detected coordinates.</p>
 <p>The formula:
 </p>
 $$
@@ -1364,9 +1364,9 @@ Where \(S_t\) = smoothed position, \(\alpha\) = dynamic alpha (how much to trust
 <figure>
   <video
     class="w-full rounded-md aspect-video object-contain"preload="metadata" controls playsinline>
-    <source src="/videos/demopantilt.mp4">
-    <p>Your browser cannot play this video. <a href="/videos/demopantilt.mp4">Download video</a>.</p>
-  </video><figcaption>Demo Pan-Tilt Video</figcaption>
+    <source src="/videos/balltracking2.mov">
+    <p>Your browser cannot play this video. <a href="/videos/balltracking2.mov">Download video</a>.</p>
+  </video><figcaption>Ball Tracking Demo</figcaption>
 </figure>
 
 <p>Thanks for reading!</p>
@@ -1397,8 +1397,8 @@ Where \(S_t\) = smoothed position, \(\alpha\) = dynamic alpha (how much to trust
           type="text/javascript"
           src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
           integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
-          data-oid="views_blog/cv pipeline.md"
-          data-oid-likes="likes_blog/cv pipeline.md"></script>
+          data-oid="views_blog/CV pipeline.md"
+          data-oid-likes="likes_blog/CV pipeline.md"></script>
       
     </section>
 

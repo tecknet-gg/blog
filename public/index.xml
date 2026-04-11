@@ -52,6 +52,16 @@
     </item>
     
     <item>
+      <title>Leviathan Trilogy</title>
+      <link>http://localhost:1313/book/leviathan/</link>
+      <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
+      <author>hattijeevan@example.com (Jeevan Hatti)</author>
+      <guid>http://localhost:1313/book/leviathan/</guid>
+      <description>Son of Franz Ferdinand goes on a Globe-Trotting adventure</description>
+      
+    </item>
+    
+    <item>
       <title>Highly Jank Pan-Tilt Mount</title>
       <link>http://localhost:1313/projects/pan-tilt-mount/</link>
       <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>

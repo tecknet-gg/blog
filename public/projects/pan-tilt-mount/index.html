@@ -260,7 +260,7 @@
     "keywords": ["levitation","electronics","PCB"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "177"
+    "wordCount": "727"
   }]
   </script>
 
@@ -716,18 +716,10 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-03-03T00:00:00&#43;00:00">March 3, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>177 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+      <time datetime="2025-03-03T00:00:00&#43;00:00">March 3, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>727 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
     
 
     
-    
-      <span class="ps-2"><span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Draft
-  </span>
-</span>
-</span>
     
   </div>
 
@@ -826,16 +818,107 @@
           <p>To set the scene, at the start of the year, out of pretty much no where, I was invited to be part of a 6 man CanSat team. For those who don&rsquo;t know what that is (i.e me 6 months ago&hellip;), its a team of teenagers that get together and build a little probe thing with some sensors and a parachute that fits neatly in a soda can. Said soda can is then launched up a couple hundred metres, and it sends down telemetry as it ascends and descends. Pretty cool!</p>
 <p>As part of the project, our very cool radio man decided to design his own antenna, and came up with the brilliant idea of designing a mount to get the antenna to point at the CanSat as is ascends and descends. Me being the moron I was thought that was pretty easy, and so I started designing the mount :].</p>
 
-<h2 class="relative group">First Iteration
-    <div id="first-iteration" class="anchor"></div>
+<h2 class="relative group">First Iterations
+    <div id="first-iterations" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#first-iteration" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#first-iterations" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>As is painfully obvious from this first iteration, I was clearly unaware of the scale of what I was trying to move around.</p>
+<p>As is painfully obvious from these first iterations, I was clearly unaware of the scale of what I was trying to move around. At least it serves the purpose of padding out this article..</p>
+<p>The initial design idea I had was a small tablet mounted device. It would have a cylindrical extrusion, with teeth along the inner surface. An orbital gear would spin around the inner circumference. Said orbital gear would be drive by a NEMA 17, and mounted to the rotating base. That gives us the Pan component of its articulation. For the the Tilt component, its just a simple gear ratio and a bracket to hold it perpendicular to the Pan axis. Enough waffling, here are pictures:</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Pan Base"
+    width="1228"
+    height="1136"
+    src="/images/panbase_hu_55e10446911d6c06.png"
+    srcset="/images/panbase_hu_55e10446911d6c06.png 800w, /images/panbase.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/images/panbase.png"></figure>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Pan-Tilt Assembly"
+    width="1228"
+    height="1136"
+    src="/images/pantiltassembly_hu_a1322c9cbd453e80.png"
+    srcset="/images/pantiltassembly_hu_a1322c9cbd453e80.png 800w, /images/pantiltassembly.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/images/pantiltassembly.png"></figure>
+<p>It looks pretty cool. My mounting solution was a rod going in between it onto which I would figure out a way to mount the antenna. What could go wrong eh?</p>
+<p>Then I was made aware of the fact that the antenna has to sort of point up REALLY quickly, since we&rsquo;re pretty close to the launch of course, and the rocket gets to altitude (300m) in about 8s. Thats just a bit fast (you&rsquo;d struggle keeping up with that using your own neck). Heres a cool little diagram that I made as part of our CDR.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Acceleration Diagram"
+    width="1072"
+    height="558"
+    src="/images/pantiltdig_hu_4d83b5942d35eb32.png"
+    srcset="/images/pantiltdig_hu_4d83b5942d35eb32.png 800w, /images/pantiltdig.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/images/pantiltdig.png"></figure>
+<p>That coupled with me actually modelling in a placeholder antenna made me realise how stupid my design is. Fun!</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Stupidity!"
+    width="1146"
+    height="1420"
+    src="/images/pantiltstupid_hu_d92362f00ab5ed4b.png"
+    srcset="/images/pantiltstupid_hu_d92362f00ab5ed4b.png 800w, /images/pantiltstupid.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/images/pantiltstupid.png"></figure>
+<p>So that was the very short lived life of the first iteration&hellip;</p>
+
+<h2 class="relative group">Actual Design
+    <div id="actual-design" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#actual-design" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The actual design is something I&rsquo;m far more proud of. It was heavily inspired by a Instructable I saw, but I cannot for the life of me find the original. I&rsquo;m not sure if its been taken down, or I&rsquo;m being incompetent, but yeah..</p>
+<p>I did of course design it around the design principle they used. It uses GT2 pulley for a more robust gear ratio, and aluminium poles for the base. It boasts an adjustable mount for the antenna, and much much higher load capacity since the antenna counter balances itself by being mounted centrally. Very fun!</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Without Antenna"
+    width="1202"
+    height="930"
+    src="/images/withoutantenna_hu_8bf312d4ff47f25d.png"
+    srcset="/images/withoutantenna_hu_8bf312d4ff47f25d.png 800w, /images/withoutantenna.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/images/withoutantenna.png"></figure>
+<p>With the patch antenna mounted, it looks like this:</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="With Antenna"
+    src="withantenna.png"
+    ></figure>
+<p>The plan was to then mount the antenna onto a tripod I had lying around, et voila. The electronics are very trivial, I won&rsquo;t bother going into them in detail. In brief, its just a Pi Pico running a python script to control 2 steppers using stepper drivers and a 24V power supply. Simple as is. The tracking software is something I would have loved to get into, but we didn&rsquo;t make finals sadly, and this project had hit the end of the run.</p>
+<p>I did end up building it, and taking it to our regional launches. I can&rsquo;t find photos of the actual mount right now, but when I do, and when I remember to add them, they&rsquo;ll be attached below :]</p>
+<p>The mount itself worked a charm, it was a but wobbly when I had to disassemble and re-assemble it at sight, but those kinks could easily be worked out with some better tolerance-d parts.</p>
+<p>This janky mount did in fact also get its own BBC interview, but they didn&rsquo;t decide that it was cool enough to make the air (though they thought us explaining a Power Supply was good enough to make B-Roll). BBC does BBC things..</p>
+<p>All the files will be available (eventually) on my <a href="https://github.com/tecknet-gg"  target="_blank">GitHub</a>, if you&rsquo;re interested for whatever reason.</p>
 
           
           

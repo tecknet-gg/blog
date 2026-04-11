@@ -16,7 +16,7 @@ Hello! Welcome to my very professional blog/portfolio/internet thing. You can fi
     target.classList.add("color-shift"); 
   } else {
     new TypeIt("#typeit-target", {
-      strings: ["Student", "Self Proclaimed Nerd", "Guy", "I ran out of tags","<i> cough cough </i>","tecknet.gg"],
+      strings: ["just a guy","tecknet.gg"],
       speed: 60,
       deleteSpeed: 40,
       nextStringDelay: 1000,
