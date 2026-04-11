@@ -9,7 +9,17 @@
     <managingEditor>hattijeevan@example.com (Jeevan Hatti)</managingEditor>
     <webMaster>hattijeevan@example.com (Jeevan Hatti)</webMaster>
     <copyright>© 2026 tecknet.gg</copyright>
-    <lastBuildDate>Sat, 31 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Highly Jank Pan-Tilt Mount</title>
+      <link>http://localhost:1313/projects/pan-tilt-mount/</link>
+      <pubDate>Tue, 03 Mar 2026 00:00:00 +0000</pubDate>
+      <author>hattijeevan@example.com (Jeevan Hatti)</author>
+      <guid>http://localhost:1313/projects/pan-tilt-mount/</guid>
+      <description>The most efficient and effective way to make a pan-tilt™.</description>
+      
+    </item>
     
     <item>
       <title>A Very Volatile CV Pipeline</title>
@@ -58,16 +68,6 @@
       <author>hattijeevan@example.com (Jeevan Hatti)</author>
       <guid>http://localhost:1313/book/leviathan/</guid>
       <description>Son of Franz Ferdinand goes on a Globe-Trotting adventure</description>
-      
-    </item>
-    
-    <item>
-      <title>Highly Jank Pan-Tilt Mount</title>
-      <link>http://localhost:1313/projects/pan-tilt-mount/</link>
-      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
-      <author>hattijeevan@example.com (Jeevan Hatti)</author>
-      <guid>http://localhost:1313/projects/pan-tilt-mount/</guid>
-      <description>The most efficient and effective way to make a pan-tilt™.</description>
       
     </item>
     

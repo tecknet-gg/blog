@@ -1,6 +1,6 @@
 ---
 title: Highly Jank Pan-Tilt Mount
-date: 2025-03-03
+date: 2026-03-03
 description: An outline of my journey making a Pan Tilt antenna mount.
 summary: The most efficient and effective way to make a pan-tilt™.
 tags:
