@@ -50,7 +50,7 @@ With the patch antenna mounted, it looks like this:
 
 ![With Antenna](withantenna.png)
 
-The plan was to then mount the antenna onto a tripod I had lying around, et voila. The electronics are very trivial, I won't bother going into them in detail. In brief, its just a Pi Pico running a python script to control 2 steppers using stepper drivers and a 24V power supply. Simple as is. The tracking software is something I would have loved to get into, but we didn't make finals sadly, and this project had hit the end of the run.
+The plan was to then mount the antenna onto a tripod I had lying around, et voila. The electronics are very trivial, I won't bother going into them in detail. In brief, its just a Pi Pico running a python script to control 2 steppers using stepper drivers and a 24V power supply. Simple as is. The tracking software is something I would have loved to get into, but we didn't make finals sadly, and this project had hit the end of the road.
 
 I did end up building it, and taking it to our regional launches. I can't find photos of the actual mount right now, but when I do, and when I remember to add them, they'll be attached below :]
 
